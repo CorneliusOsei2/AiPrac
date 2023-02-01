@@ -59,7 +59,7 @@ def query_api(search_term, location):
         reviews = get_restaurant(restaurant["id"] + "/reviews")["reviews"]
 
         for review in reviews:
-            if not restaurant["name"] in restaurants_reviews["data"]:
+            if restaurant["name"] not in restaurants_reviews["data"]:
                 restaurants_reviews["data"][restaurant["name"]] = {
                     "location": ", ".join(restaurant["location"]["display_address"]),
                     "reviews_and_ratings": [
@@ -87,25 +87,28 @@ def write_to_json(restaurants_reviews):
 
     json_object = json.dumps(restaurants_reviews, indent=4)
 
-    with open("/data/all_restaurants.json.json", "w") as outfile:
+    with open("./data/all_restaurants.json", "w") as outfile:
         outfile.write(json_object)
 
     return True
 
+import sys
+import io
 
 def main():
     """
     Meal / type of food
     Place / location
     """
+    print("\n----------------------------\n")
 
     global LOCATION
 
     search_term = input(
-        "Is there any particular food (e.g. burger) or type of food (e.g. breakfast) you'd want: "
+        "\n\nIs there any particular food (e.g. burger) or type of food (e.g. breakfast) you'd want: "
     )
     location = input(
-        "Please provide the location of the place (e.g. Ithaca) you are at or want to get the food from: "
+        "\nPlease provide the location of the place (e.g. Ithaca) you are at or want to get the food from: "
     )
 
     while not location:
@@ -114,17 +117,18 @@ def main():
     LOCATION = location
 
     print(
-        "**Thank you! Alright, give me a second to fetch the available restaurants *****-----****"
+        "\nThank you! Alright, give me a second to fetch the available restaurants *****-----****\n"
     )
+
+    sys.stdout = io.StringIO()
     flag = query_api(search_term, location)
+    sys.stdout = sys.__stdout__
 
     while not flag:
         print("ERRORRRRRRRRR")
         break
 
-    print(
-        "** Here is a list of the top 5 places we recommend based on reviews and rating by customers:"
-    )
+    print("\n----------------------------\n")
 
 
 def run():
