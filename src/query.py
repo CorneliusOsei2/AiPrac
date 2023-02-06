@@ -19,7 +19,7 @@ SEARCH_PATH = "/v3/businesses/search"
 BUSINESS_PATH = "/v3/businesses/"
 DEFAULT_TERM = "restaurant"
 DEFAULT_LOCATION = "Ithaca, NY"
-LOCATION:str = ""
+LOCATION: str = ""
 
 
 def get_data(host, path, url_params=None):
@@ -98,6 +98,8 @@ def main():
     Meal / type of food
     Place / location
     """
+
+    global LOCATION
 
     search_term = input(
         "Is there any particular food (e.g. burger) or type of food (e.g. breakfast) you'd want: "
