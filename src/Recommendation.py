@@ -1,15 +1,13 @@
-import random, statistics, math
+import random, statistics
+import model
 from dataclasses import dataclass
 ratings = [random.randint(0, 5) for _ in range(1000)]
-
-
-
 
 @dataclass
 class Restaurant():
     location: str #temporary - get from Google API
     name: str
-    reviews: list[str]
+    reviews: dict[int]
     ratings: list[int]
     rating_score: int = 0
     review_score: int = 0
@@ -19,20 +17,21 @@ class Restaurant():
         return self.final_score
         
     def set_score(self):
-        self.review_score = self.__set_review_score()
+        self.review_score = model.eval_reviews(self.reviews.keys())
         self.rating_score = self.__set_rating_score()
         self.final_score = self.__set_final_score()
-    
-    def __set_review_score(self):
-        ...
-        return statistics.mean(self.eval_review(r) for r in self.reviews) if self.reviews else 0
-        
+
     def __set_rating_score(self):
-        return  statistics.mean(self.ratings) if self.ratings else 0
+        total = sum(self.ratings)
+        norm_ratings = (r/total for r in self.ratings)
+        return  statistics.mean(norm_ratings) if self.ratings else 0
 
     def __set_final_score(self):
-        # * temporary
-        return (self.rating_score + self.review_score)/2
+        # weight is temporary
+        weight = self.__eval_weight()
+        return (weight*self.rating_score) + ((1-weight)*self.review_score)
+    
+    def __eval_weight(self):
         ...
         
 data = [{"name": ..., "reviews": ..., "ratings": ...}]
@@ -52,9 +51,9 @@ class topRecommendations():
     restaurants:list[Restaurant()]
     topN: list[Restaurant()]
 
-    def __set_top_N(self):
+    def __set_top_N(self, n):
         rs = random.sample(self.num_recs, self.restaurants)
-        self.topN = sorted(rs, key = lambda r: r.get_final_score(), reverse=True)
+        self.topN = sorted(rs, key = lambda r: r.get_final_score(), reverse=True)[:n]
         
 
 class queryRestaurants():
@@ -65,6 +64,8 @@ class queryRestaurants():
     def __set_restaurants(self):
         """
         make call to Google and get N restaurants
+        Query google for restaurants then turn the restaurants
+        into Restaurant objects.
         """
 
         restaurants = []
