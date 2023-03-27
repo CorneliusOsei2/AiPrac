@@ -1,12 +1,13 @@
 from classes.restaurant import Restaurant
-from parse_json import data
+from utils import parse_json
 
+restaurants = []
+def get_restaurant_data():
+    response = ...
+    return parse_json(response)
 
-restaurants: list[Restaurant] = []
-for name, reviews, ratings in data:
-    restaurant = Restaurant(name=name, reviews=reviews, ratings=ratings)
-    restaurant.set_score()
-    restaurants.append(restaurant)
-
-for restaurant in restaurants:
-    restaurant.set_review_score(reviews)
+def create_restaurants(restaurants):
+    for rest in restaurants:
+        restaurant = Restaurant(name=rest.name, reviews=rest.reviews, ratings=rest.ratings)
+        restaurant.set_score()
+        restaurants.append(restaurant)

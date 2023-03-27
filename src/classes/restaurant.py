@@ -1,7 +1,6 @@
 import random, statistics
-import ml_model.model as model
+from ml_model.model import eval_reviews
 from dataclasses import dataclass
-import requests
 
 ratings = [random.randint(0, 5) for _ in range(1000)]
 
@@ -20,7 +19,7 @@ class Restaurant():
         return self.final_score
         
     def set_score(self):
-        self.review_score = model.eval_reviews(self.reviews.keys())
+        self.review_score = eval_reviews(self.reviews.keys())
         self.rating_score = self.__set_rating_score()
         self.final_score = self.__set_final_score()
 
@@ -37,8 +36,8 @@ class Restaurant():
     def __eval_weight(self): #may replace with ai weight that Shuyang will do
         return .2
         
-
-class topRecommendations():
+@dataclass
+class Recommendations():
     num_recs:int
     restaurants:list[Restaurant()]
     topN: list[Restaurant()]
@@ -48,32 +47,32 @@ class topRecommendations():
         self.topN = sorted(rs, key = lambda r: r.get_final_score(), reverse=True)[:n]
         
 
-class queryRestaurants():
-    num_rest: int
-    restaurants:list[Restaurant()]
-    query: str
+# class queryRestaurants():
+#     num_rest: int
+#     restaurants:list[Restaurant()]
+#     query: str
 
-    def __set_restaurants(self):
-        """
-        make call to Google and get N restaurants
-        Query google for restaurants then turn the restaurants
-        into Restaurant objects.
-        """
+#     def __set_restaurants(self):
+#         """
+#         make call to Google and get N restaurants
+#         Query google for restaurants then turn the restaurants
+#         into Restaurant objects.
+#         """
 
-        restaurants = []
+#         restaurants = []
 
-        for _ in range(self.num_rest):
-            rec = self.__query_google(self.query)
-            restaurants += [self.__google_to_restaurant(rec)]
+#         for _ in range(self.num_rest):
+#             rec = self.__query_google(self.query)
+#             restaurants += [self.__google_to_restaurant(rec)]
 
-        self.restaurants = restaurants
+#         self.restaurants = restaurants
 
-    def __query_google(self) -> dict:
-        ...
+#     def __query_google(self) -> dict:
+#         ...
   
     
-    def __google_to_restaurant(self:dict) -> Restaurant:
-        ...
+#     def __google_to_restaurant(self:dict) -> Restaurant:
+#         ...
 
 
     
