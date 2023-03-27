@@ -1,8 +1,8 @@
 import random, statistics
-import model
+import ml_model.model as model
 from dataclasses import dataclass
-ratings = [random.randint(0, 5) for _ in range(1000)]
 
+ratings = [random.randint(0, 5) for _ in range(1000)]
 @dataclass
 class Restaurant():
     location: str #temporary - get from Google API
@@ -34,17 +34,6 @@ class Restaurant():
     def __eval_weight(self):
         ...
         
-data = [{"name": ..., "reviews": ..., "ratings": ...}]
-
-restaurants: list[Restaurant] = []
-for name, reviews, ratings in data:
-    restaurant = Restaurant(name=name, reviews=reviews, ratings=ratings)
-    restaurant.set_score()
-    restaurants.append(restaurant)
-
-for restaurant in restaurants:
-    restaurant.set_review_score(reviews)
-
 
 class topRecommendations():
     num_recs:int
