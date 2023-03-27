@@ -1,6 +1,9 @@
 import random, statistics
 import ml_model.model as model
 from dataclasses import dataclass
+import requests
+
+ratings = [random.randint(0, 5) for _ in range(1000)]
 
 ratings = [random.randint(0, 5) for _ in range(1000)]
 @dataclass
@@ -31,8 +34,8 @@ class Restaurant():
         weight = self.__eval_weight()
         return (weight*self.rating_score) + ((1-weight)*self.review_score)
     
-    def __eval_weight(self):
-        ...
+    def __eval_weight(self): #may replace with ai weight that Shuyang will do
+        return .2
         
 
 class topRecommendations():
@@ -65,10 +68,11 @@ class queryRestaurants():
 
         self.restaurants = restaurants
 
-    def __query_google(self):
+    def __query_google(self) -> dict:
         ...
+  
     
-    def __google_to_restaurant(self):
+    def __google_to_restaurant(self) -> Restaurant:
         ...
 
 
