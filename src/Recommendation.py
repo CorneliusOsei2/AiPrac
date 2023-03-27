@@ -82,7 +82,7 @@ class queryRestaurants():
         ...
   
     
-    def __google_to_restaurant(self) -> Restaurant:
+    def __google_to_restaurant(self:dict) -> Restaurant:
         ...
 
 
