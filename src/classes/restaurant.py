@@ -14,17 +14,29 @@ class Restaurant():
     final_score: int = 0
 
     def get_scores(self):
+        """
+        return a dict containing all the scores
+        """
         return {"review_score" : self.review_score, "rating_score": self.rating_score, "final_score":self.final_score}
         
     def set_scores(self):
+        """
+        update all the scores of a restaurant
+        """
         self.__set_review_score()
         self.__set_rating_score()   
         self.__set_final_score()
     
     def __set_review_score(self):
-        self.review_score = eval_reviews(self.reviews.keys())
+        """
+        update review_score as the score calculated from eval_reviews()
+        """
+        self.review_score = eval_reviews(self.reviews)
 
     def __set_rating_score(self):
+        """
+        set rating_score to a score
+        """
         total = sum(self.ratings)
         norm_ratings = (r/total for r in self.ratings)
         self.rating_score =  statistics.mean(norm_ratings) if self.ratings else 0
@@ -41,36 +53,11 @@ class Recommendations():
     topN: 'list[Restaurant()]'
 
     def __set_top_N(self, n):
+        """
+        sort and get the top N restaurants based on their final_score
+        """
         rs = random.sample(self.num_recs, self.restaurants)
-        self.topN = sorted(rs, key = lambda r: r.get_final_score(), reverse=True)[:n]
-        
-
-# class queryRestaurants():
-#     num_rest: int
-#     restaurants:list[Restaurant()]
-#     query: str
-
-#     def __set_restaurants(self):
-#         """
-#         make call to Google and get N restaurants
-#         Query google for restaurants then turn the restaurants
-#         into Restaurant objects.
-#         """
-
-#         restaurants = []
-
-#         for _ in range(self.num_rest):
-#             rec = self.__query_google(self.query)
-#             restaurants += [self.__google_to_restaurant(rec)]
-
-#         self.restaurants = restaurants
-
-#     def __query_google(self) -> dict:
-#         ...
-  
-    
-#     def __google_to_restaurant(self:dict) -> Restaurant:
-#         ...
+        self.topN = sorted(rs, key = lambda r: r.get_scores()['final_score'], reverse=True)[:n]
 
 
     
