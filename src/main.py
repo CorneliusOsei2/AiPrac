@@ -1,9 +1,10 @@
 from classes.restaurant import Restaurant
 from utils import parse_json
 import random
+from data import reviews as review_data
 
 #### Dummy data
-from data import reviews as review_data
+
 
 
 restaurants = []

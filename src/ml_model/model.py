@@ -18,21 +18,11 @@
 # <a href="https://colab.research.google.com/github/lmoroney/dlaicourse/blob/master/TensorFlow%20In%20Practice/Course%203%20-%20NLP/Course%203%20-%20Week%202%20-%20Lesson%202.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
 
 # %%
-# Run this to ensure TensorFlow 2.x is used
-# try:
-#   # %tensorflow_version only exists in Colab.
-#   %tensorflow_version 2.x
-# except Exception:
-#   pass
-
-# %%
 import json
 import tensorflow as tf
 
 from tensorflow.keras.preprocessing.text import Tokenizer
 from tensorflow.keras.preprocessing.sequence import pad_sequences
-
-# from data import reviews
 
 # %%
 vocab_size = 10000
@@ -42,18 +32,18 @@ trunc_type='post'
 padding_type='post'
 oov_tok = "<OOV>"
 training_size = 20000
-
-
-
-# # %%
-# !wget --no-check-certificate \
-#     https://storage.googleapis.com/learning-datasets/sarcasm.json \
-#     -O /tmp/sarcasm.json
-
-
 # %%
-# with open("/tmp/sarcasm.json", 'r') as f:
-with open("src/data/reviews.json", "r") as f:
+
+import os
+
+# Get the absolute path of the project root directory
+root_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+# Construct the absolute path of the reviews.json file
+reviews_file_path = os.path.join(root_dir, "data", "reviews.json")
+
+# Open the reviews.json file
+with open(reviews_file_path, "r") as f:
     datastore = json.load(f)
 
 # datastore = reviews
@@ -61,7 +51,7 @@ sentences = []
 labels = []
 
 for item in datastore:
-    print(item)
+    # print(item)
     sentences.append(item['Review'])
     labels.append(item['Liked'])
 
@@ -99,42 +89,10 @@ model = tf.keras.Sequential([
     tf.keras.layers.Dense(1, activation='sigmoid')
 ])
 model.compile(loss='binary_crossentropy',optimizer='adam',metrics=['accuracy'])
+# model.summary()
 
-# %%
-model.summary()
-
-
-# %%
 num_epochs = 30
 history = model.fit(training_padded, training_labels, epochs=num_epochs, validation_data=(testing_padded, testing_labels), verbose=2)
-
-# validation_data: Data on which to evaluate
-#                 the loss and any model metrics at the end of each epoch.
-#                 The model will not be trained on this data. Thus, note the fact
-#                 that the validation loss of data provided using
-#                 `validation_split` or `validation_data` is not affected by
-#                 regularization layers like noise and dropout.
-#                 `validation_data` will override `validation_split`.
-#                 `validation_data` could be:
-#                   - A tuple `(x_val, y_val)` of Numpy arrays or tensors.
-#                   - A tuple `(x_val, y_val, val_sample_weights)` of NumPy
-#                     arrays.
-#                   - A `tf.data.Dataset`.
-
-# %%
-import matplotlib.pyplot as plt
-
-
-def plot_graphs(history, string):
-    plt.plot(history.history[string])
-    # plt.plot(history.history['val_'+string])
-    plt.xlabel("Epochs")
-    plt.ylabel(string)
-    plt.legend([string, f'val_{string}'])
-    plt.show()
-  
-plot_graphs(history, "accuracy")
-plot_graphs(history, "loss")
 
 # %%
 reverse_word_index = dict([(value, key) for (key, value) in word_index.items()])
@@ -159,19 +117,6 @@ except ImportError:
 else:
   files.download('vecs.tsv')
   files.download('meta.tsv')
-
-# %% Testing model predictions
-# sentence = ["The food is perfect, but is horrible."]
-# sequences = tokenizer.texts_to_sequences(sentence)
-# padded = pad_sequences(sequences, maxlen=max_length, padding=padding_type, truncating=trunc_type)
-# print(model.predict(padded))
-
-
-# # %%
-# sentence = ["The food is horrible."]
-# sequences = tokenizer.texts_to_sequences(sentence)
-# padded = pad_sequences(sequences, maxlen=max_length, padding=padding_type, truncating=trunc_type)
-# print(model.predict(padded))
 
 # %%
 from statistics import mean

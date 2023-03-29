@@ -3,8 +3,6 @@ from ml_model.model import eval_reviews
 from dataclasses import dataclass
 from weight import eval_weight
 
-
-
 # ratings = [random.randint(0, 5) for _ in range(1000)]
 @dataclass
 class Restaurant():
