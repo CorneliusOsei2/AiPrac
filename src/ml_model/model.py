@@ -32,6 +32,8 @@ import tensorflow as tf
 from tensorflow.keras.preprocessing.text import Tokenizer
 from tensorflow.keras.preprocessing.sequence import pad_sequences
 
+# from data import reviews
+
 # %%
 vocab_size = 10000
 embedding_dim = 16
@@ -50,9 +52,10 @@ training_size = 20000
 
 # %%
 # with open("/tmp/sarcasm.json", 'r') as f:
-with open("reviews.json", 'r') as f:
+with open("/data/reviews.json", 'r') as f:
     datastore = json.load(f)
 
+# datastore = reviews
 sentences = []
 labels = []
 
@@ -62,9 +65,9 @@ for item in datastore:
     labels.append(item['Liked'])
 
 # %%
-training_sentences = sentences[0:training_size]
+training_sentences = sentences[:training_size]
 testing_sentences = sentences[training_size:]
-training_labels = labels[0:training_size]
+training_labels = labels[:training_size]
 testing_labels = labels[training_size:]
 
 # %%
@@ -122,12 +125,12 @@ import matplotlib.pyplot as plt
 
 
 def plot_graphs(history, string):
-  plt.plot(history.history[string])
-  # plt.plot(history.history['val_'+string])
-  plt.xlabel("Epochs")
-  plt.ylabel(string)
-  plt.legend([string, 'val_'+string])
-  plt.show()
+    plt.plot(history.history[string])
+    # plt.plot(history.history['val_'+string])
+    plt.xlabel("Epochs")
+    plt.ylabel(string)
+    plt.legend([string, f'val_{string}'])
+    plt.show()
   
 plot_graphs(history, "accuracy")
 plot_graphs(history, "loss")
@@ -138,28 +141,14 @@ reverse_word_index = dict([(value, key) for (key, value) in word_index.items()])
 def decode_sentence(text):
     return ' '.join([reverse_word_index.get(i, '?') for i in text])
 
-print(decode_sentence(training_padded[0]))
-print(training_sentences[2])
-print(labels[2])
+# print(decode_sentence(training_padded[0]))
+# print(training_sentences[2])
+# print(labels[2])
 
 # %%
 e = model.layers[0]
 weights = e.get_weights()[0]
-print(weights.shape) # shape: (vocab_size, embedding_dim)
-
-
-# %%
-# import io
-
-# out_v = io.open('vecs.tsv', 'w', encoding='utf-8')
-# out_m = io.open('meta.tsv', 'w', encoding='utf-8')
-# for word_num in range(1, vocab_size):
-#   word = reverse_word_index[word_num]
-#   embeddings = weights[word_num]
-#   out_m.write(word + "\n")
-#   out_v.write('\t'.join([str(x) for x in embeddings]) + "\n")
-# out_v.close()
-# out_m.close()
+# print(weights.shape) # shape: (vocab_size, embedding_dim)
 
 # %%
 try:
@@ -170,18 +159,18 @@ else:
   files.download('vecs.tsv')
   files.download('meta.tsv')
 
-# %%
-sentence = ["The food is perfect, but is horrible."]
-sequences = tokenizer.texts_to_sequences(sentence)
-padded = pad_sequences(sequences, maxlen=max_length, padding=padding_type, truncating=trunc_type)
-print(model.predict(padded))
+# %% Testing model predictions
+# sentence = ["The food is perfect, but is horrible."]
+# sequences = tokenizer.texts_to_sequences(sentence)
+# padded = pad_sequences(sequences, maxlen=max_length, padding=padding_type, truncating=trunc_type)
+# print(model.predict(padded))
 
 
-# %%
-sentence = ["The food is horrible."]
-sequences = tokenizer.texts_to_sequences(sentence)
-padded = pad_sequences(sequences, maxlen=max_length, padding=padding_type, truncating=trunc_type)
-print(model.predict(padded))
+# # %%
+# sentence = ["The food is horrible."]
+# sequences = tokenizer.texts_to_sequences(sentence)
+# padded = pad_sequences(sequences, maxlen=max_length, padding=padding_type, truncating=trunc_type)
+# print(model.predict(padded))
 
 # %%
 from statistics import mean
