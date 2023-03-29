@@ -1,7 +1,6 @@
 import random, statistics
-from ml_model.model import eval_reviews
+from ml_model.model import eval_reviews, eval_weights
 from dataclasses import dataclass
-from weight import eval_weight
 
 # ratings = [random.randint(0, 5) for _ in range(1000)]
 @dataclass
@@ -19,7 +18,7 @@ class Restaurant():
         
     def set_scores(self):
         self.__set_review_score()
-        self.__set_rating_score()
+        self.__set_rating_score()   
         self.__set_final_score()
     
     def __set_review_score(self):
@@ -32,7 +31,7 @@ class Restaurant():
 
     def __set_final_score(self):
         # weight is temporary
-        rating_weight, review_weight = eval_weight(self.ratings, self.reviews)
+        rating_weight, review_weight = eval_weights(self.ratings, self.reviews)
         self.final_score = (rating_weight*self.rating_score) + (review_weight*self.review_score)
         
 @dataclass

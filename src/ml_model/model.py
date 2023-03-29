@@ -40,7 +40,7 @@ import os
 root_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # Construct the absolute path of the reviews.json file
-reviews_file_path = os.path.join(root_dir, "data", "reviews.json")
+reviews_file_path = os.path.join(root_dir, "src", "data", "reviews.json")
 
 # Open the reviews.json file
 with open(reviews_file_path, "r") as f:
@@ -129,5 +129,20 @@ def eval_reviews(reviews):
       padded = pad_sequences(sequences, maxlen=max_length, padding=padding_type, truncating=trunc_type)
     
     return mean((model.predict(score) for score in padded))
+
+#%%
+# PCA to adjust weights
+import pandas as pd
+from sklearn.decomposition import PCA
+
+def eval_weights(ratings, reviews):
+  
+  # Create a dataframe with the rating and review scores
+  X = pd.DataFrame({"ratings":ratings, "reviews":reviews})
+
+  # Fit a PCA model to the data
+  pca = PCA().fit(X)
+
+  return pca.components_[0]
 
 
