@@ -44,6 +44,7 @@ oov_tok = "<OOV>"
 training_size = 20000
 
 
+
 # # %%
 # !wget --no-check-certificate \
 #     https://storage.googleapis.com/learning-datasets/sarcasm.json \
@@ -52,7 +53,7 @@ training_size = 20000
 
 # %%
 # with open("/tmp/sarcasm.json", 'r') as f:
-with open("/data/reviews.json", 'r') as f:
+with open("src/data/reviews.json", "r") as f:
     datastore = json.load(f)
 
 # datastore = reviews
