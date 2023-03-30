@@ -59,13 +59,19 @@ def query_api(search_term, location):
 
         for review in reviews:
             if not restaurant["name"] in restaurants_reviews["data"]:
-                restaurants_reviews["data"][restaurant["name"]] = [
-                    {"Review": review["text"], "Rating": review["rating"]}
-                ]
+                restaurants_reviews["data"][restaurant["name"]] = {
+                    "location": ", ".join(restaurant["location"]["display_address"]),
+                    "reviews_and_ratings": [
+                        {
+                            "Rating": review["rating"],
+                            "Review": review["text"],
+                        }
+                    ],
+                }
             else:
-                restaurants_reviews["data"][restaurant["name"]].append(
-                    {"Review": review["text"], "Rating": review["rating"]}
-                )
+                restaurants_reviews["data"][restaurant["name"]][
+                    "reviews_and_ratings"
+                ].append({"Review": review["text"], "Rating": review["rating"]})
 
     return write_to_json(restaurants_reviews)
 
