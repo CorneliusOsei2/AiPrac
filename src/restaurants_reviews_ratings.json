@@ -28,20 +28,6 @@
                 "Rating": 4
             }
         ],
-        "Ithaca Ale House": [
-            {
-                "Review": "Spacious, renovated space, and huge and delicious portions. \n\nI got the burger with onion crisps which was so good! I loved all the elements, it's so...",
-                "Rating": 4
-            },
-            {
-                "Review": "You know how when you go to a restaurant for a special family dinner with folks visiting from out of town (including our 82 year old matriarch) and there...",
-                "Rating": 1
-            },
-            {
-                "Review": "I came in for lunch & to watch the Buffalo Bills game on a semi-busy Sunday. While watching the game I ordered a pizza and French dip sandwich to chow down...",
-                "Rating": 4
-            }
-        ],
         "Thompson and Bleecker": [
             {
                 "Review": "The pizza at this place is amazing. It's the best pizza I've ever had. Of course, make sure you eat it hot, preferably within 15minutes. When it cools, the...",
@@ -98,6 +84,20 @@
                 "Rating": 3
             }
         ],
+        "Ithaca Ale House": [
+            {
+                "Review": "Spacious, renovated space, and huge and delicious portions. \n\nI got the burger with onion crisps which was so good! I loved all the elements, it's so...",
+                "Rating": 4
+            },
+            {
+                "Review": "You know how when you go to a restaurant for a special family dinner with folks visiting from out of town (including our 82 year old matriarch) and there...",
+                "Rating": 1
+            },
+            {
+                "Review": "I came in for lunch & to watch the Buffalo Bills game on a semi-busy Sunday. While watching the game I ordered a pizza and French dip sandwich to chow down...",
+                "Rating": 4
+            }
+        ],
         "Mercato Bar & Kitchen": [
             {
                 "Review": "This place is just perfection. We sat at the bar at around 5:40. The restaurant opens at 5:30 and all the table were already full but the time we got there,...",
@@ -138,6 +138,146 @@
             {
                 "Review": "Now playing: \"The Hostess from Hell\" \n\nMy partner and I went to dinner here last night. It was 7pm on a Friday and it was a nightmare trying to enjoy our...",
                 "Rating": 1
+            }
+        ],
+        "The Establishment": [
+            {
+                "Review": "I had a wonderful experience at the Good for the Seoul Establishment. The Establishment at Statler is a student-staffed and operated restaurant open...",
+                "Rating": 5
+            },
+            {
+                "Review": "Amazing , you just gotta try it yourself. I had the best steak of my life there. The steak just melts in your mouth and the flavor is still so good. They...",
+                "Rating": 5
+            },
+            {
+                "Review": "Because The Establishment is entirely student-run, it isn't on everyone's radar, and can be a hidden gem. Each night has a theme and a prix-fixe...",
+                "Rating": 4
+            }
+        ],
+        "Hakacha Restaurant": [
+            {
+                "Review": "Relatively unknown gem in Ithaca tucked away in a strip mall. Hakacha is a rare display of Asian and Italian flavors without compromising on portions!...",
+                "Rating": 5
+            },
+            {
+                "Review": "I've been here several times now and there has never been a wait. It's definitely because of the location, which is frankly horrible. The plaza that they're...",
+                "Rating": 4
+            },
+            {
+                "Review": "This restaurant is a little bit unknown for most people, but the food here is pretty good! It's pretty small here, but it's nice as both a casual and...",
+                "Rating": 5
+            }
+        ],
+        "The Greenhouse Cafe & Cocktail Lounge": [
+            {
+                "Review": "We had a fun time getting desert there. It's really lovely inside and everyone is so friendly.",
+                "Rating": 5
+            },
+            {
+                "Review": "Lacking was the food and drinks.  Steak sliders were almost inedible.  The cuts are full of gristle.  One bite even hurt.  Very pricey too.  Drinks were hit...",
+                "Rating": 3
+            },
+            {
+                "Review": "Espresso. Martini. If there's ONE thing you can only get when you come here, let it be that.\n\nI drag everyone here. Dates, parents, friends, me & my laptop...",
+                "Rating": 4
+            }
+        ],
+        "Hound and Mare": [
+            {
+                "Review": "Food was incredible. Perfectly cooked and accommodating to allergies. The yolk was drippy when you hit into it but it wasn't too messy.",
+                "Rating": 5
+            },
+            {
+                "Review": "My avocado toast was beautiful to look at and equally as tasty. I ordered an egg to go with it and it looked like two eggs for $2 or less. Incredible....",
+                "Rating": 4
+            },
+            {
+                "Review": "Stopped by here while in Ithaca for a quick(one night) trip. We were in the mood to get a feel for the town and this showed up first for the highest...",
+                "Rating": 4
+            }
+        ],
+        "Mia Restaurant": [
+            {
+                "Review": "Food was good! We got the Penang curry and chicken tikka/makhani dish all my with brussel sprouts.\n\nEverything was good. The chicken in the tikka/makhani...",
+                "Rating": 4
+            },
+            {
+                "Review": "Had dinner here before the \"Kathleen Madigan\" show.\nThe one positive- they had a table for us at 6:15 on a Friday night. Every other place had a 20 min- hr...",
+                "Rating": 3
+            },
+            {
+                "Review": "After 4 years in Ithaca, this has become one of my favorite restaurants in Commons.  The food is always exceptional, and I have tried various things every...",
+                "Rating": 5
+            }
+        ],
+        "Maru Ramen": [
+            {
+                "Review": "I've had the privilege of eating ramen in Tokyo, Beijing, Shanghai, Hong Kong, Singapore and similar worldly locations. Maru Ramen compares deliciously with...",
+                "Rating": 5
+            },
+            {
+                "Review": "This small hole in the wall ramen shop should not be underestimated. Some of the highlights of my meal were the chicken buns & spicy seafood ramen. Both of...",
+                "Rating": 4
+            },
+            {
+                "Review": "All I can say is amazing. Wife had the Miso Ramen and said it was the best she's had. I had the Bibimbop with chicken and teriyaki sauce, and it as well was...",
+                "Rating": 5
+            }
+        ],
+        "Bickering Twins": [
+            {
+                "Review": "Mark did a great job taking care of us on taco Tuesday. Our meal was fabulous and we had quite a selection to choose from.\n\nTaco Tuesday means 10% off your...",
+                "Rating": 5
+            },
+            {
+                "Review": "The good points, the server was friendly, the corn on the sweet potato tacos was very fresh, the guac was good. \n\nThe bad points. The shrimp tacos were...",
+                "Rating": 3
+            },
+            {
+                "Review": "The chicken enchiladas are the only entree on the menu beyond tacos. The dish is served baked in a dish like Shepard's pie. Unfortunately, the chicken...",
+                "Rating": 1
+            }
+        ],
+        "Saigon Kitchen": [
+            {
+                "Review": "Amazing! Had fantastic pho here on a cold night last week. Service is quick and staff is polite. Delicious.",
+                "Rating": 5
+            },
+            {
+                "Review": "Used to come here all the time while I was living in ithaca. It was definitely what I remembered. I remember it being so good, but since we live in nyc,...",
+                "Rating": 3
+            },
+            {
+                "Review": "Great friendly quick staff. \n\nPho is okay. Needs to be seasoned better. \nMissing onion base IMO. Should also be served hotter to the table. \n\nAppetizers:...",
+                "Rating": 4
+            }
+        ],
+        "Marrakech Mediterranean Cuisine": [
+            {
+                "Review": "BEST Falafel sandwich ever - and I have eaten loads of falafel in my life!  We got the falafel and chicken Shawarma gyros and are over the moon with both....",
+                "Rating": 5
+            },
+            {
+                "Review": "We arrived in Ithaca around 9pm. Most places were ready to close. We went to Marrakech and ordered a cheeseburger  and a chicken over rice. It was freshly...",
+                "Rating": 5
+            },
+            {
+                "Review": "Very good this place was amazing. I know from the outside of doesn't look like it's gonna be five stars. But trust me it is. I had pizza and a Mediterranean...",
+                "Rating": 5
+            }
+        ],
+        "Coal Yard Cafe": [
+            {
+                "Review": "Hidden gem, I make it a point to swing by for breakfast or coffee each and every time I visit Ithaca",
+                "Rating": 5
+            },
+            {
+                "Review": "A good local cafe nearby to Cornell. The place was popping on a Sunday morning around 11 when I  went but the turn over was pretty fast so that was good....",
+                "Rating": 4
+            },
+            {
+                "Review": "Most unusual (breakfast) menu in awhile. \n\nThere were 6 of us and we all enjoyed our picks which ran from a Falafel and egg dish to a Duck confit with duck...",
+                "Rating": 4
             }
         ]
     }

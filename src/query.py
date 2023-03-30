@@ -19,7 +19,6 @@ BUSINESS_PATH = "/v3/businesses/"
 
 DEFAULT_TERM = "restaurant"
 DEFAULT_LOCATION = "Ithaca, NY"
-LIMIT = 10
 
 
 def get_data(host, path, url_params={}):
@@ -37,7 +36,6 @@ def search(search_term, location):
     url_params = {
         "term": search_term.replace(" ", "+"),
         "location": location.replace(" ", "+"),
-        "limit": LIMIT,
     }
     return get_data(API_HOST, SEARCH_PATH, url_params=url_params)
 
