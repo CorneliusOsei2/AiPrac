@@ -37,7 +37,6 @@ reviews_file_path = os.path.join(root_dir, "src", "data", "data.json")
 with open(reviews_file_path, "r") as f:
     restaurant_data = json.load(f)
 
-
 def make_restaurants(n):
     """
     make a random Restaurant to use in testing the set_scores function in restaurant.py
@@ -49,17 +48,17 @@ def make_restaurants(n):
             break
         i += 1
         rest = Restaurant(name=k)
-        for rev, rat in v:
-            
+        # print(v)
+        for item in v["reviews_and_ratings"]:
+            rev, rat = item["Review"], item["Rating"]
             rest.reviews.append(rev)
             rest.ratings.append(rat)
-        print(rest); break
         restaurants.append(rest)
 
 
 if __name__ == "__main__":
     make_restaurants(10)
-    # for r in restaurants:
-    #     r.set_scores()
-    #     rev, rat, final = r.get_scores()
-    #     print(f"review score is {rev}\n rating score is {rat}\n final score is {final}")
+    for r in restaurants:
+        r.set_scores()
+        rev, rat, final = r.get_scores()
+        print(f"review score is {rev}\n rating score is {rat}\n final score is {final}")

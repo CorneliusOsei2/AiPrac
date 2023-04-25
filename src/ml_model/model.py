@@ -74,7 +74,7 @@ def eval_reviews(reviews):
     """
     Output review score
     """
-    model, tokenizer = make_model()
+    model, tokenizer = make_model(reviews)
     padded = None
     for r in reviews:
       sequences = tokenizer.texts_to_sequences(r)
