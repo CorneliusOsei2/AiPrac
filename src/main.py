@@ -1,6 +1,5 @@
 from classes.restaurant import Restaurant
 from utils import parse_json
-import random
 
 restaurants = []
 
@@ -30,7 +29,6 @@ root_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # # Construct the absolute path of the reviews.json file
 reviews_file_path = os.path.join(root_dir, "src", "data", "reviews.json")
 
-# reviews_file_path = "/home/emily/SP23/AiPrac/src/data/reviews.json"
 with open(reviews_file_path, "r") as f:
     restaurant_data = json.load(f)
 

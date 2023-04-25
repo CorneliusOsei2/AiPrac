@@ -21,11 +21,11 @@ DEFAULT_TERM = "restaurant"
 DEFAULT_LOCATION = "Ithaca, NY"
 
 
-def get_data(host, path, url_params={}):
+def get_data(host, path, url_params=None):
+    if url_params is None:
+        url_params = {}
     url = f"{host}{quote(path.encode('utf8'))}"
-    headers = {
-        "Authorization": "Bearer %s" % API_KEY,
-    }
+    headers = {"Authorization": f"Bearer {API_KEY}"}
 
     print(f"Getting available restaurants from {url} ..../.../...")
     response = requests.request("GET", url, headers=headers, params=url_params)
@@ -58,7 +58,7 @@ def query_api(search_term, location):
         reviews = get_restaurant(restaurant["id"] + "/reviews")["reviews"]
 
         for review in reviews:
-            if not restaurant["name"] in restaurants_reviews["data"]:
+            if restaurant["name"] not in restaurants_reviews["data"]:
                 restaurants_reviews["data"][restaurant["name"]] = [
                     {"Review": review["text"], "Rating": review["rating"]}
                 ]
