@@ -2,14 +2,16 @@ import random, statistics
 from ml_model.model import eval_reviews, eval_weights
 from dataclasses import dataclass
 
+from typing import List
+
 
 # ratings = [random.randint(0, 5) for _ in range(1000)]
 @dataclass
 class Restaurant:
     # location: str #temporary - get from Google API
     name: str
-    reviews: list[str] = []
-    ratings: list[int] = []
+    reviews: List[str] = []
+    ratings: List[int] = []
     rating_score: int = 0
     review_score: int = 0
     final_score: int = 0
