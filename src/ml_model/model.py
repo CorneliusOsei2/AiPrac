@@ -18,7 +18,7 @@
 import json
 import numpy as np
 import os
-from train import train_model
+from .train import train_model
 from tensorflow.keras.preprocessing.text import Tokenizer
 from tensorflow.keras.preprocessing.sequence import pad_sequences
 
@@ -30,17 +30,7 @@ padding_type='post'
 oov_tok = "<OOV>"
 training_size = 20000
 
-# Get the absolute path of the project root directory
-root_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
-# Construct the absolute path of the reviews.json file
-reviews_file_path = os.path.join(root_dir, "src", "data", "reviews.json")
-
-# Open the reviews.json file
-with open(reviews_file_path, "r") as f:
-    reviews_data = json.load(f)
-
-def make_model():
+def make_model(reviews_data):
     """
     tokenize and split data then return a model trained on that data
     """

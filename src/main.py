@@ -43,16 +43,17 @@ def make_restaurants(n):
     make a random Restaurant to use in testing the set_scores function in restaurant.py
     """
     i = 0
-    print(restaurant_data.get("data"))
+    # print(restaurant_data.get("data"))
     for k, v in restaurant_data.get("data").items():
         if i == n:
             break
         i += 1
         rest = Restaurant(name=k)
         for rev, rat in v:
+            
             rest.reviews.append(rev)
             rest.ratings.append(rat)
-
+        print(rest); break
         restaurants.append(rest)
 
 
