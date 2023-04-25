@@ -1,8 +1,8 @@
 from classes.restaurant import Restaurant
 from utils import parse_json
-import random
 
 restaurants = []
+
 def get_restaurant_data():
     """
     get restaurants from a query
@@ -29,28 +29,29 @@ root_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # # Construct the absolute path of the reviews.json file
 reviews_file_path = os.path.join(root_dir, "src", "data", "reviews.json")
 
-# reviews_file_path = "/home/emily/SP23/AiPrac/src/data/reviews.json"
 with open(reviews_file_path, "r") as f:
-    reviews_data = json.load(f)
+    restaurant_data = json.load(f)
 
-def make_dummy_restaurant(n):
+def make_restaurants(n):
     """
     make a random Restaurant to use in testing the set_scores function in restaurant.py
     """
-    reviews = [random.choice(reviews_data)["Review"] for _ in range(n)]
-    ratings = [random.uniform(0,5) for _ in range(n)]
+    i = 0
+    for k, v in restaurant_data.get("data").items():
+        if i == n:
+            break
+        i+=1
+        rest = Restaurant(name=k)
+        for rev, rat in v:
+            rest.reviews.append(rev)
+            rest.ratings.append(rat)
 
-    return Restaurant(
-        name="test",
-        reviews=reviews,
-        ratings=ratings,
-        rating_score=0,
-        review_score=0,
-        final_score=0,
-    )
-
+        restaurants.append(rest)
+    
+   
 if __name__ == "__main__":
-    restaurant = make_dummy_restaurant(400)
-    restaurant.set_scores()
-    rev, rat, final = restaurant.get_scores()
-    print(f"review score is {rev}\n rating score is {rat}\n final score is {final}")
+    make_restaurants(10)
+    for r in restaurants:
+        r.set_scores()
+        rev, rat, final = r.get_scores()
+        print(f"review score is {rev}\n rating score is {rat}\n final score is {final}")
