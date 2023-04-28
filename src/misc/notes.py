@@ -1,7 +1,7 @@
 # %%
 #Generate random restaurant data
-import random
 import json
+import random
 
 restaurants = []
 for i in range(500):

@@ -1,5 +1,6 @@
 import tensorflow as tf
 
+
 def train_model(vocab_size,embedding_dim,max_length,training_padded, training_labels, testing_padded, testing_labels):
   """
   create and train a neural network on some data
@@ -10,7 +11,7 @@ def train_model(vocab_size,embedding_dim,max_length,training_padded, training_la
       tf.keras.layers.GlobalAveragePooling1D(),
       tf.keras.layers.Dense(24, activation='relu'),
       tf.keras.layers.Dense(1, activation='sigmoid')
-  ], stdout=None)
+  ])
   model.compile(loss='binary_crossentropy',optimizer='adam',metrics=['accuracy'])
   # model.summary()
 

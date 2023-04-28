@@ -1,5 +1,6 @@
 import json
 
+
 def tsv2json(input_file,output_file):
 	arr = []
 	file = open(input_file, 'r')

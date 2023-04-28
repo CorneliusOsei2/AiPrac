@@ -16,15 +16,13 @@
 # <a href="https://colab.research.google.com/github/lmoroney/dlaicourse/blob/master/TensorFlow%20In%20Practice/Course%203%20-%20NLP/Course%203%20-%20Week%202%20-%20Lesson%202.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
 
 import json
-import numpy as np
 import os
-from .train import train_model
-from tensorflow.keras.preprocessing.text import Tokenizer
-from tensorflow.keras.preprocessing.sequence import pad_sequences
 
-import sys
-sys.path.insert(1, '../data')
-import reviews
+import numpy as np
+from tensorflow.keras.preprocessing.sequence import pad_sequences
+from tensorflow.keras.preprocessing.text import Tokenizer
+
+from .train import train_model
 
 vocab_size = 10000
 embedding_dim = 16
@@ -34,17 +32,21 @@ padding_type='post'
 oov_tok = "<OOV>"
 training_size = 20000
 
-def make_model():
+def make_model(reviews):
     """
     tokenize and split data then return a model trained on that data
     """
     sentences = []
     labels = []
+    # print(reviews)
 
-    for item in data:
-        print(item)
+    for item in reviews:
+        # print(item)
         sentences.append(item['Review'])
         labels.append(item['Liked'])
+
+    # print(sentences)
+    # print(labels)
 
     training_sentences = sentences[:training_size]
     testing_sentences = sentences[training_size:]
@@ -74,20 +76,26 @@ def make_model():
     return model, tokenizer
 
 from statistics import mean
+
+
 def eval_reviews(reviews, model, tokenizer):
     """
     Output review score
     """
-    # model, tokenizer = make_model(reviews)
+
+    # print(reviews)
     padded = None
-    for r in reviews:
-      sequences = tokenizer.texts_to_sequences(r)
-      padded = pad_sequences(sequences, maxlen=max_length, padding=padding_type, truncating=trunc_type)
+    sequences = tokenizer.texts_to_sequences([reviews[0]])
+    padded = pad_sequences(sequences, maxlen=max_length, padding=padding_type, truncating=trunc_type)
+    # scores.append(model.predict(padded))
     
-    return mean((model.predict(score) for score in padded))
+    print(model.predict(padded)) 
+    return model.predict(padded)
 
 import pandas as pd
 from sklearn.decomposition import PCA
+
+
 def eval_weights(ratings, reviews):
     """
     Output AI adjusted weights for review and rating scores

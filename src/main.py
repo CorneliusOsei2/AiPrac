@@ -1,5 +1,7 @@
-from classes.restaurant import Restaurant
-from .ml_model.model import make_model
+import json
+import os
+
+from classes.restaurant import Restaurant, train
 from query import run
 
 restaurants = []
@@ -18,8 +20,6 @@ def create_restaurants(restaurants):
         restaurants.append(restaurant)
 
 
-import json
-import os
 
 # # Get the absolute path of the project root directory
 root_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -48,9 +48,11 @@ def make_restaurants(n):
         restaurants.append(rest)
 
 
+
 if __name__ == "__main__":
     # run()
     make_restaurants(10)
+    train()
     for r in restaurants:
         r.set_scores()
         rev, rat, final = r.get_scores()

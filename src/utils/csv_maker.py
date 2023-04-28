@@ -1,7 +1,9 @@
 #Transforming list of json objects into csv 
 import csv
 import json
-import pandas as pd 
+
+import pandas as pd
+
 
 def csv_maker(input_file, restaurant_data):
 

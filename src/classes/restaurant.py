@@ -1,11 +1,29 @@
-import random, statistics
-from ml_model.model import eval_reviews, eval_weights, make_model
-
+import os
+import json
+import random
+import statistics
 from typing import List
 
-model, tokenizer = make_model()
+from ml_model.model import eval_reviews, eval_weights, make_model
 
+model, tokenizer = None, None
 
+def train():
+    global model, tokenizer
+
+    # # Get the absolute path of the project root directory
+    root_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+    # # Construct the absolute path of the reviews.json file
+    reviews_file_path = os.path.join(root_dir, "data", "reviews.json")
+
+    with open(reviews_file_path, "r") as f:
+        reviews = json.load(f)
+
+    model, tokenizer = make_model(reviews)
+    
+
+    
 # ratings = [random.randint(0, 5) for _ in range(1000)]
 class Restaurant:
     def __init__(self, name) -> None:
