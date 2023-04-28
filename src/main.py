@@ -1,5 +1,6 @@
 from classes.restaurant import Restaurant
 from utils import parse_json
+from ml_model import make_model
 from query import run
 
 restaurants = []
@@ -44,22 +45,26 @@ def make_restaurants(n):
     make a random Restaurant to use in testing the set_scores function in restaurant.py
     """
     i = 0
+    # print(restaurant_data.get("data"))
     for k, v in restaurant_data.get("data").items():
         if i == n:
             break
         i += 1
         rest = Restaurant(name=k)
-        for rev, rat in v:
+        print(v)
+        for item in v["reviews_and_ratings"]:
+            rev, rat = item["Review"], item["Rating"]
             rest.reviews.append(rev)
             rest.ratings.append(rat)
-
         restaurants.append(rest)
 
 
 if __name__ == "__main__":
     run()
     make_restaurants(10)
-    # for r in restaurants:
-    #     r.set_scores()
-    #     rev, rat, final = r.get_scores()
-    #     print(f"review score is {rev}\n rating score is {rat}\n final score is {final}")
+    model, tokenizer = make_model()
+    for r in restaurants:
+        r.set_scores()
+        r.set_model(model, tokenizer)
+        rev, rat, final = r.get_scores()
+        print(f"review score is {rev}\n rating score is {rat}\n final score is {final}")

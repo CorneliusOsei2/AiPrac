@@ -18,9 +18,13 @@
 import json
 import numpy as np
 import os
-from train import train_model
+from .train import train_model
 from tensorflow.keras.preprocessing.text import Tokenizer
 from tensorflow.keras.preprocessing.sequence import pad_sequences
+
+import sys
+sys.path.insert(1, '../data')
+import reviews
 
 vocab_size = 10000
 embedding_dim = 16
@@ -30,16 +34,6 @@ padding_type='post'
 oov_tok = "<OOV>"
 training_size = 20000
 
-# Get the absolute path of the project root directory
-root_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
-# Construct the absolute path of the reviews.json file
-reviews_file_path = os.path.join(root_dir, "src", "data", "reviews.json")
-
-# Open the reviews.json file
-with open(reviews_file_path, "r") as f:
-    reviews_data = json.load(f)
-
 def make_model():
     """
     tokenize and split data then return a model trained on that data
@@ -47,8 +41,8 @@ def make_model():
     sentences = []
     labels = []
 
-    for item in reviews_data:
-        # print(item)
+    for item in data:
+        print(item)
         sentences.append(item['Review'])
         labels.append(item['Liked'])
 
@@ -80,11 +74,11 @@ def make_model():
     return model, tokenizer
 
 from statistics import mean
-def eval_reviews(reviews):
+def eval_reviews(reviews, model, tokenizer):
     """
     Output review score
     """
-    model, tokenizer = make_model()
+    # model, tokenizer = make_model(reviews)
     padded = None
     for r in reviews:
       sequences = tokenizer.texts_to_sequences(r)
