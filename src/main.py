@@ -1,5 +1,6 @@
 from classes.restaurant import Restaurant
 from utils import parse_json
+from ml_model import make_model
 
 restaurants = []
 
@@ -58,7 +59,9 @@ def make_restaurants(n):
 
 if __name__ == "__main__":
     make_restaurants(10)
+    model, tokenizer = make_model()
     for r in restaurants:
         r.set_scores()
+        r.set_model(model, tokenizer)
         rev, rat, final = r.get_scores()
         print(f"review score is {rev}\n rating score is {rat}\n final score is {final}")

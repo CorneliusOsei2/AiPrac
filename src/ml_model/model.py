@@ -22,6 +22,10 @@ from .train import train_model
 from tensorflow.keras.preprocessing.text import Tokenizer
 from tensorflow.keras.preprocessing.sequence import pad_sequences
 
+import sys
+sys.path.insert(1, '../data')
+import reviews
+
 vocab_size = 10000
 embedding_dim = 16
 max_length = 100
@@ -30,14 +34,14 @@ padding_type='post'
 oov_tok = "<OOV>"
 training_size = 20000
 
-def make_model(reviews_data):
+def make_model():
     """
     tokenize and split data then return a model trained on that data
     """
     sentences = []
     labels = []
 
-    for item in reviews_data:
+    for item in data:
         print(item)
         sentences.append(item['Review'])
         labels.append(item['Liked'])
@@ -70,11 +74,11 @@ def make_model(reviews_data):
     return model, tokenizer
 
 from statistics import mean
-def eval_reviews(reviews):
+def eval_reviews(reviews, model, tokenizer):
     """
     Output review score
     """
-    model, tokenizer = make_model(reviews)
+    # model, tokenizer = make_model(reviews)
     padded = None
     for r in reviews:
       sequences = tokenizer.texts_to_sequences(r)

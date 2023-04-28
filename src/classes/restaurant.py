@@ -1,5 +1,5 @@
 import random, statistics
-from ml_model.model import eval_reviews, eval_weights
+from ml_model.model import eval_reviews, eval_weights, make_model
 
 from typing import List
 
@@ -14,6 +14,11 @@ class Restaurant:
         self.rating_score: int = 0
         self.review_score: int = 0
         self.inal_score: int = 0
+        self.model: None
+
+    def set_model(self, model, tokenizer):
+        self.model = model
+        self.tokenizer = tokenizer
 
     def get_scores(self):
         """
@@ -37,7 +42,7 @@ class Restaurant:
         """
         update review_score as the score calculated from eval_reviews()
         """
-        self.review_score = eval_reviews(self.reviews)
+        self.review_score = eval_reviews(self.reviews, self.model, self.tokenizer)
 
     def __set_rating_score(self):
         """
