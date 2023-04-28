@@ -5,7 +5,7 @@ import requests
 
 """
 Command:
-python query.py --term="restaurant" --location="Ithaca, NY"`
+python main.py --term="restaurant" --location="Ithaca, NY"`
 """
 
 import argparse
