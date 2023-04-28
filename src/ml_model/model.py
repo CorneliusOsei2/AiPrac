@@ -38,7 +38,7 @@ def make_model(reviews_data):
     labels = []
 
     for item in reviews_data:
-        # print(item)
+        print(item)
         sentences.append(item['Review'])
         labels.append(item['Liked'])
 

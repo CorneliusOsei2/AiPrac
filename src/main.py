@@ -48,7 +48,7 @@ def make_restaurants(n):
             break
         i += 1
         rest = Restaurant(name=k)
-        # print(v)
+        print(v)
         for item in v["reviews_and_ratings"]:
             rev, rat = item["Review"], item["Rating"]
             rest.reviews.append(rev)
