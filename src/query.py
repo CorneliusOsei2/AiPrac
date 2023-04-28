@@ -87,7 +87,7 @@ def write_to_json(restaurants_reviews):
         outfile.write(json_object)
 
 
-def main():
+def run():
     parser = argparse.ArgumentParser()
 
     parser.add_argument(
@@ -109,7 +109,3 @@ def main():
 
     input_values = parser.parse_args()
     query_api(input_values.term, input_values.location)
-
-
-if __name__ == "__main__":
-    main()

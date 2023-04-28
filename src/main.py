@@ -1,5 +1,6 @@
 from classes.restaurant import Restaurant
 from utils import parse_json
+from query import run
 
 restaurants = []
 
@@ -43,7 +44,6 @@ def make_restaurants(n):
     make a random Restaurant to use in testing the set_scores function in restaurant.py
     """
     i = 0
-    print(restaurant_data.get("data"))
     for k, v in restaurant_data.get("data").items():
         if i == n:
             break
@@ -57,6 +57,7 @@ def make_restaurants(n):
 
 
 if __name__ == "__main__":
+    run()
     make_restaurants(10)
     # for r in restaurants:
     #     r.set_scores()
