@@ -4,12 +4,12 @@ import random
 import statistics
 from typing import List
 
-from ml_model.model import eval_reviews, eval_weights, make_model
+from ml_model.model import eval_reviews, eval_weights, make_model, rev_scores
 
-model, tokenizer = None, None
+revs, model, tokenizer = [], None, None
 
 def train():
-    global model, tokenizer
+    global revs, model, tokenizer
 
     # # Get the absolute path of the project root directory
     root_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -21,10 +21,7 @@ def train():
         reviews = json.load(f)
 
     model, tokenizer = make_model(reviews)
-    
-
-    
-# ratings = [random.randint(0, 5) for _ in range(1000)]
+    revs = rev_scores(reviews, model, tokenizer)
 class Restaurant:
     def __init__(self, name) -> None:
         self.name: str = name
@@ -57,6 +54,7 @@ class Restaurant:
         """
         update review_score as the score calculated from eval_reviews()
         """
+        print("eval_reviews", self.reviews[:5])
         self.review_score = eval_reviews(self.reviews, model, tokenizer)
 
     def __set_rating_score(self):
@@ -69,7 +67,9 @@ class Restaurant:
 
     def __set_final_score(self):
         # weight is temporary
-        rating_weight, review_weight = eval_weights(self.ratings, self.reviews)
+
+        print("eval_weights", self.reviews[:5])
+        rating_weight, review_weight = eval_weights(self.ratings, self.reviews, model, tokenizer)
         self.final_score = (rating_weight * self.rating_score) + (
             review_weight * self.review_score
         )

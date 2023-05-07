@@ -83,25 +83,65 @@ def eval_reviews(reviews, model, tokenizer):
     Output review score
     """
 
-    # print(reviews)
+    # print("in eval_reviews", reviews)
     padded = None
     sequences = tokenizer.texts_to_sequences([reviews[0]])
     padded = pad_sequences(sequences, maxlen=max_length, padding=padding_type, truncating=trunc_type)
     # scores.append(model.predict(padded))
+
     
-    print(model.predict(padded)) 
+    # print(model.predict(padded)) 
     return model.predict(padded)
+
+def rev_scores(reviews, model, tokenizer):
+    """
+    Output review score
+    """
+
+    # scores.append(model.predict(padded))
+    scores = []
+    # print("in rev_scores", reviews[:5])
+
+    # padded = None
+    # # print("REVIEW", reviews[0]['Review'])
+    # sequences = tokenizer.texts_to_sequences([reviews[0]['Review']])
+    # print("sequences", sequences)
+    # padded = pad_sequences(sequences, maxlen=max_length, padding=padding_type, truncating=trunc_type)
+
+    # print(padded)
+    # scores.append(model.predict(padded))
+    
+    for r in reviews:
+        padded = None
+        # print(r)
+        sequences = tokenizer.texts_to_sequences([r['Review']])
+        padded = pad_sequences(sequences, maxlen=max_length, padding=padding_type, truncating=trunc_type)
+        scores.append(model.predict(padded))
+    print("scores", scores)
+
+    return scores
 
 import pandas as pd
 from sklearn.decomposition import PCA
 
 
-def eval_weights(ratings, reviews):
+def eval_weights(ratings, reviews, model, tokenizer):
     """
     Output AI adjusted weights for review and rating scores
     """
     # Create a dataframe with the rating and review scores
-    X = pd.DataFrame({"ratings":ratings, "reviews":reviews})
+
+    # print(ratings)
+    # print(reviews)
+
+    scores = rev_scores(reviews, model, tokenizer)
+    print("in eval_weights", scores)
+    # print("ratings", [ratings[0]])
+
+
+    X = pd.DataFrame({"ratings":ratings, "reviews":scores})
+
+    print("X", X)
 
     # Fit a PCA model to the data
     pca = PCA().fit(X)
