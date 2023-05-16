@@ -4,24 +4,27 @@ import random
 import statistics
 from typing import List
 
-from ml_model.model import eval_reviews, eval_weights, make_model, rev_scores
+from ml_model.model import eval_reviews, eval_weights, make_model
 
-revs, model, tokenizer = [], None, None
+model, tokenizer = None, None
 
 def train():
-    global revs, model, tokenizer
+    """
+    Train the model
+    """
+    global model, tokenizer
 
     # # Get the absolute path of the project root directory
     root_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-    # # Construct the absolute path of the reviews.json file
-    reviews_file_path = os.path.join(root_dir, "data", "reviews.json")
+    # # Construct the absolute path
+    data_file_path = os.path.join(root_dir, "data", "model_data.json")
 
-    with open(reviews_file_path, "r") as f:
-        reviews = json.load(f)
+    with open(data_file_path, "r") as f:
+        data = json.load(f)
 
-    model, tokenizer = make_model(reviews)
-    revs = rev_scores(reviews, model, tokenizer)
+    model, tokenizer = make_model(data)
+    
 class Restaurant:
     def __init__(self, name) -> None:
         self.name: str = name
@@ -31,16 +34,16 @@ class Restaurant:
         self.rating_score: int = 0
         self.review_score: int = 0
         self.final_score: int = 0
-
-    def get_scores(self):
-        """
-        return a dict containing all the scores
-        """
-        return {
-            "review_score": self.review_score,
-            "rating_score": self.rating_score,
-            "final_score": self.final_score,
-        }
+    
+    # def get_scores(self):
+    #     """
+    #     return a dict containing all the scores
+    #     """
+    #     return {
+    #         "review_score": self.review_score,
+    #         "rating_score": self.rating_score,
+    #         "final_score": self.final_score,
+    #     }
 
     def set_scores(self):
         """
@@ -54,8 +57,8 @@ class Restaurant:
         """
         update review_score as the score calculated from eval_reviews()
         """
-        print("eval_reviews", self.reviews[:5])
         self.review_score = eval_reviews(self.reviews, model, tokenizer)
+        print("HELLLLLLOOOOOOOOOOO")
 
     def __set_rating_score(self):
         """
@@ -66,26 +69,26 @@ class Restaurant:
         self.rating_score = statistics.mean(norm_ratings) if self.ratings else 0
 
     def __set_final_score(self):
-        # weight is temporary
+        global model, tokenizer
 
-        print("eval_weights", self.reviews[:5])
         rating_weight, review_weight = eval_weights(self.ratings, self.reviews, model, tokenizer)
+
         self.final_score = (rating_weight * self.rating_score) + (
             review_weight * self.review_score
         )
 
 
 class Recommendations:
-    def __init__(self) -> None:
-        self.num_recs: int = 0
-        self.restaurants = []
-        self.topN = []
+    def __init__(self, restaurants) -> None:
+        self.restaurants:list = restaurants
+        self.best = []
 
-    def __set_top_N(self, n):
+    def set_top_N(self, n):
         """
         sort and get the top N restaurants based on their final_score
         """
-        rs = random.sample(self.num_recs, self.restaurants)
-        self.topN = sorted(
-            rs, key=lambda r: r.get_scores()["final_score"], reverse=True
+        n = min(n, len(self.restaurants))
+        rs = random.sample(self.restaurants, n)
+        self.best = sorted(
+            rs, key=lambda r: r.final_score, reverse=True
         )[:n]

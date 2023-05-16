@@ -17,6 +17,8 @@
 
 import json
 import os
+import sys
+import io
 
 import numpy as np
 from tensorflow.keras.preprocessing.sequence import pad_sequences
@@ -32,21 +34,16 @@ padding_type='post'
 oov_tok = "<OOV>"
 training_size = 20000
 
-def make_model(reviews):
+def make_model(data):
     """
     tokenize and split data then return a model trained on that data
     """
     sentences = []
     labels = []
-    # print(reviews)
 
-    for item in reviews:
-        # print(item)
+    for item in data:
         sentences.append(item['Review'])
         labels.append(item['Liked'])
-
-    # print(sentences)
-    # print(labels)
 
     training_sentences = sentences[:training_size]
     testing_sentences = sentences[training_size:]
@@ -56,16 +53,12 @@ def make_model(reviews):
     tokenizer = Tokenizer(num_words=vocab_size, oov_token=oov_tok)
     tokenizer.fit_on_texts(training_sentences)
 
-    # word_index = tokenizer.word_index
-
     training_sequences = tokenizer.texts_to_sequences(training_sentences)
     training_padded = pad_sequences(training_sequences, maxlen=max_length, padding=padding_type, truncating=trunc_type)
 
     testing_sequences = tokenizer.texts_to_sequences(testing_sentences)
     testing_padded = pad_sequences(testing_sequences, maxlen=max_length, padding=padding_type, truncating=trunc_type)
 
-    # Need this block to get it to work with TensorFlow 2.x
-    
     training_padded = np.array(training_padded)
     training_labels = np.array(training_labels)
     testing_padded = np.array(testing_padded)
@@ -75,49 +68,28 @@ def make_model(reviews):
 
     return model, tokenizer
 
-from statistics import mean
-
-
-def eval_reviews(reviews, model, tokenizer):
+def eval_reviews(reviews, model, tokenizer)->int:
     """
-    Output review score
+    return the total review score
     """
 
-    # print("in eval_reviews", reviews)
-    padded = None
     sequences = tokenizer.texts_to_sequences([reviews[0]])
     padded = pad_sequences(sequences, maxlen=max_length, padding=padding_type, truncating=trunc_type)
-    # scores.append(model.predict(padded))
 
-    
-    # print(model.predict(padded)) 
-    return model.predict(padded)
+    return model.predict(padded)[0][0]
 
-def rev_scores(reviews, model, tokenizer):
+def get_all_rev_scores(reviews, model, tokenizer)->list:
     """
-    Output review score
+    return a list of all the review scores
     """
 
-    # scores.append(model.predict(padded))
     scores = []
-    # print("in rev_scores", reviews[:5])
-
-    # padded = None
-    # # print("REVIEW", reviews[0]['Review'])
-    # sequences = tokenizer.texts_to_sequences([reviews[0]['Review']])
-    # print("sequences", sequences)
-    # padded = pad_sequences(sequences, maxlen=max_length, padding=padding_type, truncating=trunc_type)
-
-    # print(padded)
-    # scores.append(model.predict(padded))
     
     for r in reviews:
-        padded = None
-        # print(r)
-        sequences = tokenizer.texts_to_sequences([r['Review']])
+        print("hi")
+        sequences = tokenizer.texts_to_sequences(r)
         padded = pad_sequences(sequences, maxlen=max_length, padding=padding_type, truncating=trunc_type)
-        scores.append(model.predict(padded))
-    print("scores", scores)
+        scores.append(model.predict(padded)[0][0])
 
     return scores
 
@@ -127,21 +99,15 @@ from sklearn.decomposition import PCA
 
 def eval_weights(ratings, reviews, model, tokenizer):
     """
-    Output AI adjusted weights for review and rating scores
+    return AI adjusted weights for review and rating scores
     """
+
+    rev_scores = get_all_rev_scores(reviews, model, tokenizer)
+
     # Create a dataframe with the rating and review scores
+    X = pd.DataFrame({"ratings":ratings, "rev_scores":rev_scores})
 
-    # print(ratings)
-    # print(reviews)
-
-    scores = rev_scores(reviews, model, tokenizer)
-    print("in eval_weights", scores)
-    # print("ratings", [ratings[0]])
-
-
-    X = pd.DataFrame({"ratings":ratings, "reviews":scores})
-
-    print("X", X)
+    # print("X", X)
 
     # Fit a PCA model to the data
     pca = PCA().fit(X)
@@ -149,6 +115,6 @@ def eval_weights(ratings, reviews, model, tokenizer):
     # Transform the data using the PCA model
     pca.transform(X)
 
-    return pca.components_[0]
+    rating_weight, review_weight = pca.components_[0]
 
-
+    return abs(rating_weight), abs(review_weight)
