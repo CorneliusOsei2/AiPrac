@@ -19,8 +19,7 @@ SEARCH_PATH = "/v3/businesses/search"
 BUSINESS_PATH = "/v3/businesses/"
 DEFAULT_TERM = "restaurant"
 DEFAULT_LOCATION = "Ithaca, NY"
-
-LOCATION: str = ""
+LOCATION:str = ""
 
 
 def get_data(host, path, url_params=None):
