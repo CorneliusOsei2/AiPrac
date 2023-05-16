@@ -83,10 +83,45 @@ def query_api(search_term, location):
 
 
 def write_to_json(restaurants_reviews):
+    if not restaurants_reviews:
+        return False
+
     json_object = json.dumps(restaurants_reviews, indent=4)
 
     with open("restaurants_reviews_ratings.json", "w") as outfile:
         outfile.write(json_object)
+
+    return True
+
+
+def main():
+    """
+    Meal / type of food
+    Place / location
+    """
+
+    search_term = input(
+        "Is there any particular food (e.g. burger) or type of food (e.g. breakfast) you'd want: "
+    )
+    location = input(
+        "Please provide the location of the place (e.g. Ithaca) you are at or want to get the food from: "
+    )
+
+    while not location:
+        location = input("Please provide an actual location")
+
+    print(
+        "**Thank you! Alright, give me a second to fetch the available restaurants *****-----****"
+    )
+    flag = query_api(search_term, location)
+
+    while not flag:
+        print("ERRORRRRRRRRR")
+        break
+
+    print(
+        f"** Here is a list of the top 5 places we recommend based on reviews and rating by customers: {'1': 4}"
+    )
 
 
 def run():

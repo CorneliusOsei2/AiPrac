@@ -2,9 +2,10 @@ import json
 import os
 
 from classes.restaurant import Restaurant, train, Recommendations
-from query import run
+from query import main
 
 restaurants = []
+
 
 def init_restaurants(n):
     """
@@ -31,8 +32,10 @@ def init_restaurants(n):
             rest.ratings.append(rat)
         restaurants.append(rest)
 
-import io 
-import sys 
+
+import io
+import sys
+
 
 def make_restaurants(n=100, display=False):
     global restaurants
@@ -49,14 +52,16 @@ def make_restaurants(n=100, display=False):
     if display:
         for r in restaurants:
             print(f"SCORES FOR {r.name}\n")
-            print(f"\nreview score is {r.review_score}\n rating score is {r.rating_score}\n final score is {r.final_score}")
+            print(
+                f"\nreview score is {r.review_score}\n rating score is {r.rating_score}\n final score is {r.final_score}"
+            )
             print("\n----------------------------\n")
+
 
 def make_recommendations(n=5):
     global restaurants
 
-    recs = Recommendations(
-        restaurants=restaurants)
+    recs = Recommendations(restaurants=restaurants)
     recs.set_top_N(n)
 
     for i in range(len(recs.best)):
@@ -65,10 +70,8 @@ def make_recommendations(n=5):
         print(f"final score is {r.final_score}")
         print("\n----------------------------\n")
 
+
 if __name__ == "__main__":
-    make_restaurants(10)
+    main()
+    make_restaurants()
     make_recommendations()
-
-
-
-
