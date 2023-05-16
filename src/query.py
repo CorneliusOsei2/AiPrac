@@ -43,6 +43,7 @@ def search(search_term, location):
 
 
 def get_restaurant(restaurant_id):
+    print(restaurant_id)
     business_path = BUSINESS_PATH + restaurant_id
     return get_data(API_HOST, business_path)
 
@@ -60,7 +61,7 @@ def query_api(search_term, location):
         reviews = get_restaurant(restaurant["id"] + "/reviews")["reviews"]
 
         for review in reviews:
-            if not restaurant["name"] in restaurants_reviews["data"]:
+            if restaurant["name"] not in restaurants_reviews["data"]:
                 restaurants_reviews["data"][restaurant["name"]] = {
                     "location": ", ".join(restaurant["location"]["display_address"]),
                     "reviews_and_ratings": [
@@ -88,7 +89,7 @@ def write_to_json(restaurants_reviews):
 
     json_object = json.dumps(restaurants_reviews, indent=4)
 
-    with open("/data/all_restaurants.json.json", "w") as outfile:
+    with open("./data/all_restaurants.json", "w") as outfile:
         outfile.write(json_object)
 
     return True
@@ -120,11 +121,7 @@ def main():
         break
 
     print(
-<<<<<<< HEAD
-        f"** Here is a list of the top 5 places we recommend based on reviews and rating by customers"
-=======
         "** Here is a list of the top 5 places we recommend based on reviews and rating by customers:"
->>>>>>> 22e05b9620c81aea613238c2980597031cd1c3e2
     )
 
 
