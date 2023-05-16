@@ -22,6 +22,8 @@ BUSINESS_PATH = "/v3/businesses/"
 DEFAULT_TERM = "restaurant"
 DEFAULT_LOCATION = "Ithaca, NY"
 
+LOCATION: str = ""
+
 
 def get_data(host, path, url_params=None):
     if url_params is None:
@@ -29,15 +31,15 @@ def get_data(host, path, url_params=None):
     url = f"{host}{quote(path.encode('utf8'))}"
     headers = {"Authorization": f"Bearer {API_KEY}"}
 
-    print(f"Getting available restaurants in {url_params.get('location')} ..../.../...")
+    print(f"Getting available restaurants in {LOCATION} ..../.../...")
     response = requests.request("GET", url, headers=headers, params=url_params)
     return response.json()
 
 
-def search(search_term, location):
+def search(search_term):
     url_params = {
         "term": search_term.replace(" ", "+"),
-        "location": location.replace(" ", "+"),
+        "location": LOCATION.replace(" ", "+"),
     }
     return get_data(API_HOST, SEARCH_PATH, url_params=url_params)
 
@@ -47,12 +49,12 @@ def get_restaurant(restaurant_id):
     return get_data(API_HOST, business_path)
 
 
-def query_api(search_term, location):
-    response = search(search_term, location)
+def query_api(search_term):
+    response = search(search_term)
     restaurants = response.get("businesses")
 
     if not restaurants:
-        print(f"Sorry, we could not find any restaurants in {location}.")
+        print(f"Sorry, we could not find any restaurants in {LOCATION}.")
         return
 
     restaurants_reviews = defaultdict(dict)
@@ -103,17 +105,17 @@ def main():
     search_term = input(
         "Is there any particular food (e.g. burger) or type of food (e.g. breakfast) you'd want: "
     )
-    location = input(
+    LOCATION = input(
         "Please provide the location of the place (e.g. Ithaca) you are at or want to get the food from: "
     )
 
-    while not location:
-        location = input("Please provide an actual location")
+    while not LOCATION:
+        LOCATION = input("Please provide an actual location")
 
     print(
         "**Thank you! Alright, give me a second to fetch the available restaurants *****-----****"
     )
-    flag = query_api(search_term, location)
+    flag = query_api(search_term)
 
     while not flag:
         print("ERRORRRRRRRRR")
