@@ -58,7 +58,6 @@ class Restaurant:
         update review_score as the score calculated from eval_reviews()
         """
         self.review_score = eval_reviews(self.reviews, model, tokenizer)
-        print("HELLLLLLOOOOOOOOOOO")
 
     def __set_rating_score(self):
         """
