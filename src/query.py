@@ -17,8 +17,6 @@ API_KEY = "9J3O7n5PJAs9mUCbg_--IyC3DJdaLAa8C_Pi5cvABnphQDV-hqccCZRpD5spZxSF6mnrZ
 API_HOST = "https://api.yelp.com"
 SEARCH_PATH = "/v3/businesses/search"
 BUSINESS_PATH = "/v3/businesses/"
-
-
 DEFAULT_TERM = "restaurant"
 DEFAULT_LOCATION = "Ithaca, NY"
 
