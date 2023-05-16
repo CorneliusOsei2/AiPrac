@@ -92,6 +92,8 @@ def write_to_json(restaurants_reviews):
 
     return True
 
+import sys
+import io
 
 def main():
     """
@@ -99,7 +101,7 @@ def main():
     Place / location
     """
     print("\n----------------------------\n")
-    
+
     search_term = input(
         "\n\nIs there any particular food (e.g. burger) or type of food (e.g. breakfast) you'd want: "
     )
@@ -115,7 +117,10 @@ def main():
     print(
         "\nThank you! Alright, give me a second to fetch the available restaurants *****-----****\n"
     )
+
+    sys.stdout = io.StringIO()
     flag = query_api(search_term, location)
+    sys.stdout = sys.__stdout__
 
     while not flag:
         print("ERRORRRRRRRRR")

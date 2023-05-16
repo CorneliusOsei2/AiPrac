@@ -66,7 +66,7 @@ def make_recommendations(n):
     recs.set_top_N(n)
 
     print(
-        f"\n\n** Here is a list of the top {n} places we recommend based on reviews and rating by customers:"
+        f"\n\nHere is a list of the top {n} places we recommend based on reviews and rating by customers:"
     )
 
     for i in range(len(recs.best)):
