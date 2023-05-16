@@ -43,6 +43,8 @@ def make_restaurants(n=100, display=False):
     train()
     [r.set_scores() for r in restaurants]
     sys.stdout = sys.__stdout__
+    
+    
 
     if display:
         for r in restaurants:
@@ -64,7 +66,7 @@ def make_recommendations(n=5):
         print("\n----------------------------\n")
 
 if __name__ == "__main__":
-    make_restaurants()
+    make_restaurants(10)
     make_recommendations()
 
 

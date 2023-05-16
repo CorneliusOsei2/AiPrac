@@ -107,7 +107,7 @@ def eval_weights(ratings, reviews, model, tokenizer):
     # Create a dataframe with the rating and review scores
     X = pd.DataFrame({"ratings":ratings, "rev_scores":rev_scores})
 
-    # print("X", X)
+    print("X", X)
 
     # Fit a PCA model to the data
     pca = PCA().fit(X)
