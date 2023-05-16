@@ -1,0 +1,415 @@
+{
+    "data": {
+        "FERNS": {
+            "location": "166 1st Ave, New York, NY 10009",
+            "reviews_and_ratings": [
+                {
+                    "Rating": 5,
+                    "Review": "This place is fire! \n\nWe went for a simple brunch and were delighted with the options available \n\nThe fried chicken sandwich is 5/5 amazing. I would get it..."
+                },
+                {
+                    "Review": "This place is fire! \n\nWe went for a simple brunch and were delighted with the options available \n\nThe fried chicken sandwich is 5/5 amazing. I would get it...",
+                    "Rating": 5
+                },
+                {
+                    "Review": "Came by for a late night bite on the weekend. Ferns has a cool vibe and really cute decor. Service was a mix, servers were nice but very forgetful so you...",
+                    "Rating": 4
+                },
+                {
+                    "Review": "A 4* experience but docking one star because there is a 3% credit card fee which was not clearly disclosed.\n\nWonderful brunch experience in a cozy and...",
+                    "Rating": 3
+                }
+            ]
+        },
+        "Best Bagel & Coffee": {
+            "location": "225 W 35th St, New York, NY 10001",
+            "reviews_and_ratings": [
+                {
+                    "Rating": 5,
+                    "Review": "Absolutely amazing! I was here the last time I was in New York. I searched it out on this visit. I'm so glad I found it."
+                },
+                {
+                    "Review": "Absolutely amazing! I was here the last time I was in New York. I searched it out on this visit. I'm so glad I found it.",
+                    "Rating": 5
+                },
+                {
+                    "Review": "As a frequent traveler to NYC from Atlanta, I've had my fair share of bagels in Manhattan. However, I must say that Best Bagel and Coffee has won me over....",
+                    "Rating": 5
+                },
+                {
+                    "Review": "I was never a bagel woman until now!\nWho knew you could add so many different options to a bagel to really make it a full breakfasts.\nIf you're visiting I'd...",
+                    "Rating": 5
+                }
+            ]
+        },
+        "Mom's Kitchen & Bar": {
+            "location": "701 9th Ave, New York, NY 10019",
+            "reviews_and_ratings": [
+                {
+                    "Rating": 5,
+                    "Review": "Stopped in here on a Saturday morning and the menu was SO fun. I ordered the Pancake Burrito and it was so good, but I had the hardest time choosing because..."
+                },
+                {
+                    "Review": "Stopped in here on a Saturday morning and the menu was SO fun. I ordered the Pancake Burrito and it was so good, but I had the hardest time choosing because...",
+                    "Rating": 5
+                },
+                {
+                    "Review": "What a very pleasant surprise for what seemed to be your run of the mill restaurant. \n\nI got the avocado toast with lox, and avocado toast usually isn't...",
+                    "Rating": 4
+                },
+                {
+                    "Review": "Not much of a brunch person but if you are in the Astoria area you have to check out this place. They have all-day brunch and lots of cocktails. The place...",
+                    "Rating": 4
+                }
+            ]
+        },
+        "Good Thanks Cafe": {
+            "location": "131A Orchard St, New York, NY 10002",
+            "reviews_and_ratings": [
+                {
+                    "Rating": 5,
+                    "Review": "Another high-quality brunch spot in les ~ went there around 11ish and got seated in the heated outside patio so did not have to wait for at least 30 mins...."
+                },
+                {
+                    "Review": "Another high-quality brunch spot in les ~ went there around 11ish and got seated in the heated outside patio so did not have to wait for at least 30 mins....",
+                    "Rating": 5
+                },
+                {
+                    "Review": "Aussie-inspired brunch spot in Brooklyn. The place was very pretty and the vibe was perfect for Sunday brunch.\n\nOpted for the labneh and eggs - topped up $2...",
+                    "Rating": 4
+                },
+                {
+                    "Review": "Walked into Good Thanks Cafe with a couple of friends for brunch on Saturday. The wait was about 40 minutes which wasn't too bad! \n\nThe food was decent and...",
+                    "Rating": 4
+                }
+            ]
+        },
+        "Banter": {
+            "location": "169 Sullivan St, New York, NY 10012",
+            "reviews_and_ratings": [
+                {
+                    "Rating": 5,
+                    "Review": "My Mushroom Toast was really tasty! I really enjoyed it and its unique flavors of it. I shared some of the Golden Folded Eggs which was also good! The..."
+                },
+                {
+                    "Review": "My Mushroom Toast was really tasty! I really enjoyed it and its unique flavors of it. I shared some of the Golden Folded Eggs which was also good! The...",
+                    "Rating": 5
+                },
+                {
+                    "Review": "This is a really cute restaurant that's perfect for lunch and brunch. Be prepared for a 20-40 minute wait regardless of the location (there's one in West...",
+                    "Rating": 4
+                },
+                {
+                    "Review": "Whenever I walk by, I always find this restaurant to have such a long wait on a Saturday- with tons of people waiting outside. So, I thought that I would...",
+                    "Rating": 4
+                },
+                {
+                    "Review": "Ordered ice latte, oj and the fresh start. All very delish. The oj seemed freshly squeezed and the fresh start tasted like lemonade with a hint of ginger....",
+                    "Rating": 5
+                },
+                {
+                    "Review": "So happy I found this restaurant on my way out of the city. The lunch here was fantastic and I can not wait to return here on my next visit to the village....",
+                    "Rating": 5
+                },
+                {
+                    "Review": "Banter is one of my favorite brunch spots in the city! They don't accept reservations which I personally enjoy - we were able to sit down immediately on a...",
+                    "Rating": 5
+                }
+            ]
+        },
+        "Daily Provisions": {
+            "location": "103 E 19th St, New York, NY 10003",
+            "reviews_and_ratings": [
+                {
+                    "Rating": 5,
+                    "Review": "I didn't know what I was getting into when I ordered avocado toast with two eggs via Caviar but holy cow, that was a fire breakfast! \n\nBread is perfection,..."
+                },
+                {
+                    "Review": "I didn't know what I was getting into when I ordered avocado toast with two eggs via Caviar but holy cow, that was a fire breakfast! \n\nBread is perfection,...",
+                    "Rating": 5
+                },
+                {
+                    "Review": "Food tasted fine, ordered bacon, egg, and cheese and a sausage, egg, and cheese. Tipped 18% from the start and waited for half my order for 20+ minutes....",
+                    "Rating": 2
+                },
+                {
+                    "Review": "Nice spot\n\nI came by with friends. They ordered an iced coffee and an egg sandwich. I just had water as I just had breakfast. Service was rapid. Although...",
+                    "Rating": 5
+                }
+            ]
+        },
+        "Sunday in Brooklyn": {
+            "location": "348 Wythe Ave, Brooklyn, NY 11249",
+            "reviews_and_ratings": [
+                {
+                    "Rating": 4,
+                    "Review": "Having brunch at Sunday in Brooklyn on a Sunday in Brooklyn is very fitting. \n\nBrunch was a last minute decision and reservations were gone by the time I..."
+                },
+                {
+                    "Review": "Having brunch at Sunday in Brooklyn on a Sunday in Brooklyn is very fitting. \n\nBrunch was a last minute decision and reservations were gone by the time I...",
+                    "Rating": 4
+                },
+                {
+                    "Review": "The place itself is a nice, but a little cramped. The service was on par. \nThe food I ordered was okay. I wouldn't order what I had again. The Brooklyn...",
+                    "Rating": 3
+                },
+                {
+                    "Review": "This place made it on Buzzfeed's Worth It show for their pancakes and, let me tell ya, these pancakes are worth every cent for sure! The pancakes are...",
+                    "Rating": 4
+                }
+            ]
+        },
+        "Egg Shop": {
+            "location": "151 Elizabeth St, New York, NY 10012",
+            "reviews_and_ratings": [
+                {
+                    "Rating": 4,
+                    "Review": "This was such a cute breakfast shop that we happen to stumble into before starting our shopping day. \n\nWe started our order with a latte and cold brew and..."
+                },
+                {
+                    "Review": "This was such a cute breakfast shop that we happen to stumble into before starting our shopping day. \n\nWe started our order with a latte and cold brew and...",
+                    "Rating": 4
+                },
+                {
+                    "Review": "I got the Turkish eggs and they were my absolute favorite! So perfect for a light brunch and they were plated so beautifully. We also got the truffle...",
+                    "Rating": 4
+                },
+                {
+                    "Review": "This place was nothing special. It's very small inside and they have some tables outside. My friend and I ordered the Brisket Chilaquiles. I was...",
+                    "Rating": 3
+                }
+            ]
+        },
+        "Clinton Street Baking Company": {
+            "location": "4 Clinton St, New York, NY 10002",
+            "reviews_and_ratings": [
+                {
+                    "Rating": 5,
+                    "Review": "Long wait but worth it, absolutely delicious! Best brunch I've ever had. Get the blueberry pancakes and the biscuit breakfast sandwich!"
+                },
+                {
+                    "Review": "Long wait but worth it, absolutely delicious! Best brunch I've ever had. Get the blueberry pancakes and the biscuit breakfast sandwich!",
+                    "Rating": 5
+                },
+                {
+                    "Review": "Haven't been here in many years! Still a solid brunch spot. We came with a reservation so no wait at all but there's almost always a line out of the door....",
+                    "Rating": 5
+                },
+                {
+                    "Review": "Always been a big fan of pancakes, so of course had to try this well-known brunch place. My group of 3 waited about an hour to get seated on a Thursday...",
+                    "Rating": 3
+                }
+            ]
+        },
+        "C&B": {
+            "location": "178 E 7th St, New York, NY 10009",
+            "reviews_and_ratings": [
+                {
+                    "Rating": 5,
+                    "Review": "Get the sausage, egg and cheese sandwich. It is delicious and it will send you into a food coma 10/10 recommend.\n\nService was pretty quick - I did get there..."
+                },
+                {
+                    "Review": "Get the sausage, egg and cheese sandwich. It is delicious and it will send you into a food coma 10/10 recommend.\n\nService was pretty quick - I did get there...",
+                    "Rating": 5
+                },
+                {
+                    "Review": "Perfect neighborhood shop for the efficiency and the offerings. I was told the focaccia was the best in the city. Big claim. Tbh I had the rosemary focaccia...",
+                    "Rating": 5
+                },
+                {
+                    "Review": "pig & egg sandwich $11.90  : came with braised pork belly that was super tender on a roll. the egg was fluffy as well.\n\noverall, a bit on the pricier side....",
+                    "Rating": 4
+                }
+            ]
+        },
+        "Time Out Market New York": {
+            "location": "55 Water St, Brooklyn, NY 11201",
+            "reviews_and_ratings": [
+                {
+                    "Rating": 4,
+                    "Review": "Visited Ivy Stark in the Time Out Market. While I hate how overpriced the food is, I got decent portion sizes. I ordered the shrimp grain bowl which was..."
+                },
+                {
+                    "Review": "Visited Ivy Stark in the Time Out Market. While I hate how overpriced the food is, I got decent portion sizes. I ordered the shrimp grain bowl which was...",
+                    "Rating": 4
+                },
+                {
+                    "Review": "It was a little confusing to navigate as there are multiple restaurants within the same space. We ordered and seated ourselves. \n\nI came here after a...",
+                    "Rating": 5
+                },
+                {
+                    "Review": "This was my first time to Dumbo. I've been to the Time out Market in Miami but the Miami location is nothing compared to this one. The food vendors are very...",
+                    "Rating": 5
+                }
+            ]
+        },
+        "Da Andrea": {
+            "location": "35 W 13th St, New York, NY 10011",
+            "reviews_and_ratings": [
+                {
+                    "Rating": 5,
+                    "Review": "Great meal and ambiance.  A place that needs to be on your list if you enjoy good food and wine."
+                },
+                {
+                    "Review": "Great meal and ambiance.  A place that needs to be on your list if you enjoy good food and wine.",
+                    "Rating": 5
+                },
+                {
+                    "Review": "STOP SCROLLING. I know what you are wondering. Is it worth it? Or will you be disappointed? \n\nLet me tell you straight- coming here is a good idea. I chose...",
+                    "Rating": 5
+                },
+                {
+                    "Review": "Love this restaurant! Great food and drinks! They also have great service and descent environment. Happy birthday to my birthday girl!",
+                    "Rating": 5
+                }
+            ]
+        },
+        "Russ & Daughters": {
+            "location": "179 E Houston St, New York, NY 10002",
+            "reviews_and_ratings": [
+                {
+                    "Rating": 5,
+                    "Review": "Great quality! I devoured my bagel it before I could snag a photo -- it was that good! One of the iconic spots in ny to get a smoked salmon bagel. Grab a..."
+                },
+                {
+                    "Review": "Great quality! I devoured my bagel it before I could snag a photo -- it was that good! One of the iconic spots in ny to get a smoked salmon bagel. Grab a...",
+                    "Rating": 5
+                },
+                {
+                    "Review": "Russ & Daughters is the place to get a fresh bagel. They sell plenty of other things but I only came for a bagel and got their cinnamon babka as well and...",
+                    "Rating": 5
+                },
+                {
+                    "Review": "This location is really about the fish not the bagels. All of the bagels are made at the Brooklyn location so if you like a fresh warm bagel this is not...",
+                    "Rating": 4
+                }
+            ]
+        },
+        "Bread & Spread": {
+            "location": "151 Front St, Dumbo, NY 11201",
+            "reviews_and_ratings": [
+                {
+                    "Rating": 5,
+                    "Review": "Hidden gem!   Looking for a breakfast sandwich and stumbled on this place.  Carlo recommended a breakfast burrito and it was amazing.  Full of veggies and a..."
+                },
+                {
+                    "Review": "Hidden gem!   Looking for a breakfast sandwich and stumbled on this place.  Carlo recommended a breakfast burrito and it was amazing.  Full of veggies and a...",
+                    "Rating": 5
+                },
+                {
+                    "Review": "Pros:\n-$5 breakfast sandwiches (meat and cheese are upcharges) \n-Some outdoor seating \n\nGreat place to get a tasty and inexpensive breakfast sandwich! Loved...",
+                    "Rating": 4
+                },
+                {
+                    "Review": "I found this place when I was rlly hangry hehe and the food immediately made me feel better!! \nSandwich was very filling and satisfying. \n\nIndoor is cozy,...",
+                    "Rating": 5
+                }
+            ]
+        },
+        "The Little Sweet Cafe": {
+            "location": "77B Hoyt St, Boerum Hill, NY 11201",
+            "reviews_and_ratings": [
+                {
+                    "Rating": 5,
+                    "Review": "Everything about this cafe is perfect. The food is amazing, the service is great, and the ambiance/environment is perfect. It's a nice cozy cafe with..."
+                },
+                {
+                    "Review": "Everything about this cafe is perfect. The food is amazing, the service is great, and the ambiance/environment is perfect. It's a nice cozy cafe with...",
+                    "Rating": 5
+                },
+                {
+                    "Review": "Hit this little gem up three times while in Brooklyn. Sat in the window nook each time and the space was so therapeutic to be in. \n\nYummy dirty chai lattes...",
+                    "Rating": 5
+                },
+                {
+                    "Review": "My friend and I rolled up on a rainy Saturday noon for some crepes. I was aghast at the prices! $19 for a smoked ham crepe? Even in Manhattan, that would...",
+                    "Rating": 3
+                }
+            ]
+        },
+        "Clark's Restaurant": {
+            "location": "80 Clark St, Brooklyn, NY 11201",
+            "reviews_and_ratings": [
+                {
+                    "Rating": 5,
+                    "Review": "Clark's Restaurant is an establishment that serves diner-style / diner-sized food. It is located in Brooklyn Heights.  I have eaten here often over the..."
+                },
+                {
+                    "Review": "Clark's Restaurant is an establishment that serves diner-style / diner-sized food. It is located in Brooklyn Heights.  I have eaten here often over the...",
+                    "Rating": 5
+                },
+                {
+                    "Review": "$$$blueberry pancakes  \nDelicious though! Was not impressed with the $$egg whites. \nMy company all enjoyed their food. We went because one of them is a...",
+                    "Rating": 4
+                },
+                {
+                    "Review": "I don't know why this place is rated so highly when everything is mediocre and if not, just not great at all. Honestly, never had been more dissatisfied...",
+                    "Rating": 1
+                }
+            ]
+        },
+        "Social House Cafe": {
+            "location": "60 Broadway, Brooklyn, NY 11249",
+            "reviews_and_ratings": [
+                {
+                    "Rating": 5,
+                    "Review": "If you like Good quality Italian Coffee and Best Matcha Chai Latte and Popular Mimosa! Let's chat in this Gem Place! \n\nPS: Don't forget about Nutella Latte..."
+                },
+                {
+                    "Review": "If you like Good quality Italian Coffee and Best Matcha Chai Latte and Popular Mimosa! Let's chat in this Gem Place! \n\nPS: Don't forget about Nutella Latte...",
+                    "Rating": 5
+                },
+                {
+                    "Review": "Solid local coffee shop. We had about 1.5 hours to kill before our dinner reservation in the area and was able to grab a coffee and loiter for a long time....",
+                    "Rating": 4
+                },
+                {
+                    "Review": "Awesome, dog friendly, local coffee shop. The barista was super friendly and helpful. \nCoffee is delicious and there's plenty of options to mix it up. They...",
+                    "Rating": 4
+                }
+            ]
+        },
+        "Maman": {
+            "location": "239 Centre St, New York, NY 10013",
+            "reviews_and_ratings": [
+                {
+                    "Rating": 4,
+                    "Review": "This is a the perfect coffee shop in Soho if you're looking for somewhere cute and aesthetic. Like all Maman stores, it's decorated with blue and white..."
+                },
+                {
+                    "Review": "This is a the perfect coffee shop in Soho if you're looking for somewhere cute and aesthetic. Like all Maman stores, it's decorated with blue and white...",
+                    "Rating": 4
+                },
+                {
+                    "Review": "Cute coffee shop in the mists of SoHo. Didn't get to explore a lot of SoHo much but there was good oat milk latte, pistachio croissant, and an avocado egg...",
+                    "Rating": 4
+                },
+                {
+                    "Review": "After hearing so many good things about the chocolate chip cookie, I had to come and try it. \n\nI loved that the cookie had what I believe to be macadamia...",
+                    "Rating": 4
+                }
+            ]
+        },
+        "Kopitiam": {
+            "location": "151 E Broadway, New York, NY 10002",
+            "reviews_and_ratings": [
+                {
+                    "Rating": 5,
+                    "Review": "For someone who grew up eating Malaysian food, this place definitely hits the spot! \nLoved the hor kashai which was a lovely mix  of black coffee and milo!..."
+                },
+                {
+                    "Review": "For someone who grew up eating Malaysian food, this place definitely hits the spot! \nLoved the hor kashai which was a lovely mix  of black coffee and milo!...",
+                    "Rating": 5
+                },
+                {
+                    "Review": "Loved everything here! My friend had recommended me this place as one of his favorite restaurants in NY. Love the FLAVOR of everything! The tok tok me is...",
+                    "Rating": 5
+                },
+                {
+                    "Review": "For some reason I had really high expectations coming in and was sooo excited to try many dishes, but left confused and disappointed. \n\nTok Tok Mee- the...",
+                    "Rating": 2
+                }
+            ]
+        }
+    }
+}

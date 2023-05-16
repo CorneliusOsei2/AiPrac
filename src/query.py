@@ -120,7 +120,7 @@ def main():
         break
 
     print(
-        f"** Here is a list of the top 5 places we recommend based on reviews and rating by customers: {'1': 4}"
+        f"** Here is a list of the top 5 places we recommend based on reviews and rating by customers"
     )
 
 
