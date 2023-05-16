@@ -36,26 +36,25 @@ def get_data(host, path, url_params=None):
     return response.json()
 
 
-def search(search_term):
+def search(search_term, location):
     url_params = {
         "term": search_term.replace(" ", "+"),
-        "location": LOCATION.replace(" ", "+"),
+        "location": location.replace(" ", "+"),
     }
     return get_data(API_HOST, SEARCH_PATH, url_params=url_params)
 
 
 def get_restaurant(restaurant_id):
-    print(restaurant_id)
     business_path = BUSINESS_PATH + restaurant_id
     return get_data(API_HOST, business_path)
 
 
-def query_api(search_term):
-    response = search(search_term)
+def query_api(search_term, location):
+    response = search(search_term, location)
     restaurants = response.get("businesses")
 
     if not restaurants:
-        print(f"Sorry, we could not find any restaurants in {LOCATION}.")
+        print(f"Sorry, we could not find any restaurants in {location}.")
         return
 
     restaurants_reviews = defaultdict(dict)
@@ -63,7 +62,7 @@ def query_api(search_term):
         reviews = get_restaurant(restaurant["id"] + "/reviews")["reviews"]
 
         for review in reviews:
-            if restaurant["name"] not in restaurants_reviews["data"]:
+            if not restaurant["name"] in restaurants_reviews["data"]:
                 restaurants_reviews["data"][restaurant["name"]] = {
                     "location": ", ".join(restaurant["location"]["display_address"]),
                     "reviews_and_ratings": [
@@ -91,7 +90,7 @@ def write_to_json(restaurants_reviews):
 
     json_object = json.dumps(restaurants_reviews, indent=4)
 
-    with open("./data/all_restaurants.json", "w") as outfile:
+    with open("/data/all_restaurants.json.json", "w") as outfile:
         outfile.write(json_object)
 
     return True
@@ -106,17 +105,19 @@ def main():
     search_term = input(
         "Is there any particular food (e.g. burger) or type of food (e.g. breakfast) you'd want: "
     )
-    LOCATION = input(
+    location = input(
         "Please provide the location of the place (e.g. Ithaca) you are at or want to get the food from: "
     )
 
-    while not LOCATION:
-        LOCATION = input("Please provide an actual location")
+    while not location:
+        location = input("Please provide an actual location")
+
+    LOCATION = location
 
     print(
         "**Thank you! Alright, give me a second to fetch the available restaurants *****-----****"
     )
-    flag = query_api(search_term)
+    flag = query_api(search_term, location)
 
     while not flag:
         print("ERRORRRRRRRRR")
