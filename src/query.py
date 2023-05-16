@@ -29,7 +29,7 @@ def get_data(host, path, url_params=None):
     url = f"{host}{quote(path.encode('utf8'))}"
     headers = {"Authorization": f"Bearer {API_KEY}"}
 
-    print(f"Getting available restaurants from {url} ..../.../...")
+    print(f"Getting available restaurants in {url_params.get('location')} ..../.../...")
     response = requests.request("GET", url, headers=headers, params=url_params)
     return response.json()
 
@@ -88,7 +88,7 @@ def write_to_json(restaurants_reviews):
 
     json_object = json.dumps(restaurants_reviews, indent=4)
 
-    with open("restaurants_reviews_ratings.json", "w") as outfile:
+    with open("/data/all_restaurants.json.json", "w") as outfile:
         outfile.write(json_object)
 
     return True
@@ -120,7 +120,7 @@ def main():
         break
 
     print(
-        f"** Here is a list of the top 5 places we recommend based on reviews and rating by customers: {'1': 4}"
+        "** Here is a list of the top 5 places we recommend based on reviews and rating by customers:"
     )
 
 
