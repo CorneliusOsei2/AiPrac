@@ -26,6 +26,7 @@ def init_restaurants(n):
             break
         i += 1
         rest = Restaurant(name=k)
+        rest.location = v["location"]
         for item in v["reviews_and_ratings"]:
             rev, rat = item["Review"], item["Rating"]
             rest.reviews.append(rev)
@@ -56,20 +57,40 @@ def make_restaurants(n=100, display=False):
             print("\n----------------------------\n")
 
 
-def make_recommendations(n=5):
+def make_recommendations(n):
     global restaurants
 
     recs = Recommendations(restaurants=restaurants)
     recs.set_top_N(n)
 
+    print(
+        f"\n\nHere is a list of the top {n} places we recommend based on reviews and rating by customers:"
+    )
+
     for i in range(len(recs.best)):
         r = recs.best[i]
-        print(f"{i+1}. {r.name}\n")
+        print(f"\n{i+1}. {r.name}\n")
         print(f"final score is {r.final_score}")
         print("\n----------------------------\n")
 
+    return recs
+
 
 if __name__ == "__main__":
-    main()
-    make_restaurants()
-    make_recommendations()
+
+    go = "y"
+    while go=="y":
+        main()
+        n = int(input("\nChoose how many recommendations you want: "))
+        make_restaurants()
+        recs = make_recommendations(n)
+
+        go2 = "y"
+        while go2=="y":
+            rank = int(input("\nGive the rank of the recommendation you want: "))
+            r = recs.best[rank-1]
+            print(f"\nHere's the location of {r.name}:\n{r.location}")
+            go2 = input("\nDo you want another restaurant's location? say (y/n): ")
+
+        go = input("\nDo you want to do this again? say (y/n): ")
+        

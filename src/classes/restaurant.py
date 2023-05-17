@@ -34,16 +34,6 @@ class Restaurant:
         self.rating_score: int = 0
         self.review_score: int = 0
         self.final_score: int = 0
-    
-    # def get_scores(self):
-    #     """
-    #     return a dict containing all the scores
-    #     """
-    #     return {
-    #         "review_score": self.review_score,
-    #         "rating_score": self.rating_score,
-    #         "final_score": self.final_score,
-    #     }
 
     def set_scores(self):
         """
@@ -87,7 +77,7 @@ class Recommendations:
         sort and get the top N restaurants based on their final_score
         """
         n = min(n, len(self.restaurants))
-        rs = random.sample(self.restaurants, n)
+        
         self.best = sorted(
-            rs, key=lambda r: r.final_score, reverse=True
+            self.restaurants, key=lambda r: r.final_score, reverse=True
         )[:n]
