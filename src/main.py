@@ -87,7 +87,7 @@ if __name__ == "__main__":
 
         go2 = "y"
         while go2=="y":
-            rank = int(input("\nGive the rank of the recommendation you want (e.g. 1, 2, 3, etc.): "))
+            rank = int(input("\nGive the list number of the recommendation you want (e.g. 1, 2, 3, etc.): "))
             r = recs.best[rank-1]
             print(f"\nHere's the location of {r.name}:\n{r.location}")
             go2 = input("\nDo you want another restaurant's location? say (y/n): ")
