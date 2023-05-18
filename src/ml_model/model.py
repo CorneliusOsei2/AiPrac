@@ -15,15 +15,13 @@
 #  [markdown]
 # <a href="https://colab.research.google.com/github/lmoroney/dlaicourse/blob/master/TensorFlow%20In%20Practice/Course%203%20-%20NLP/Course%203%20-%20Week%202%20-%20Lesson%202.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
 
-import json
-import os
-import sys
-import io
+################
+# We customized this document to suit our project and added new functions such as eval_weights. Their document served merely as a guideline.
+################
 
 import numpy as np
 from tensorflow.keras.preprocessing.sequence import pad_sequences
 from tensorflow.keras.preprocessing.text import Tokenizer
-
 from .train import train_model
 
 vocab_size = 10000
