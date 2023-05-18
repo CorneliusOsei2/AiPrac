@@ -1,412 +1,421 @@
 {
     "data": {
-        "Wildberry Pancakes and Cafe": {
-            "location": "130 E Randolph St, Chicago, IL 60601",
+        "Hound and Mare": {
+            "location": "118 N Aurora St, Ithaca, NY 14850",
             "reviews_and_ratings": [
                 {
                     "Rating": 5,
-                    "Review": "Food was wonderful like always anytime I can I will continue coming to get an awesome breakfast"
+                    "Review": "Food was incredible. Perfectly cooked and accommodating to allergies. The yolk was drippy when you hit into it but it wasn't too messy."
                 },
                 {
-                    "Review": "Food was wonderful like always anytime I can I will continue coming to get an awesome breakfast",
+                    "Review": "Food was incredible. Perfectly cooked and accommodating to allergies. The yolk was drippy when you hit into it but it wasn't too messy.",
                     "Rating": 5
                 },
                 {
-                    "Review": "WOW! Reading all of the yelp reviews did not disappoint! I said I wanted to eat food that I'm going to dream about again and The CINNABON Pancakes.... GET...",
-                    "Rating": 5
-                },
-                {
-                    "Review": "This review comes at the end of my second visit. The place is cool and cozy, also hip and modern.  Busy. I can see why, its nice here. \nFirst time:  Paul...",
+                    "Review": "My avocado toast was beautiful to look at and equally as tasty. I ordered an egg to go with it and it looked like two eggs for $2 or less. Incredible....",
                     "Rating": 4
                 },
                 {
-                    "Review": "We first visited this location years ago, we have recently come back to visit Chicago and knew we needed to visit Wildberry. We were reminded of this well...",
+                    "Review": "Stopped by here while in Ithaca for a quick(one night) trip. We were in the mood to get a feel for the town and this showed up first for the highest...",
+                    "Rating": 4
+                }
+            ]
+        },
+        "Coal Yard Cafe": {
+            "location": "143 Maple Ave, Ithaca, NY 14850",
+            "reviews_and_ratings": [
+                {
+                    "Rating": 5,
+                    "Review": "The staff are incredibly friendly; I was in town for a conference and they offered to provide suggestions for cool gorges to check out. I checked out two of..."
+                },
+                {
+                    "Review": "The staff are incredibly friendly; I was in town for a conference and they offered to provide suggestions for cool gorges to check out. I checked out two of...",
                     "Rating": 5
                 },
                 {
-                    "Review": "Amazing service. Best pancakes I've ever had. Food came fast. Cinnamon bun pancakes were so amazing.",
+                    "Review": "Most unusual (breakfast) menu in awhile. \n\nThere were 6 of us and we all enjoyed our picks which ran from a Falafel and egg dish to a Duck confit with duck...",
+                    "Rating": 4
+                },
+                {
+                    "Review": "It's a small building set right off the street with parking in the rear, today parking was at a premium. As we approached you could smell the mouth watering...",
+                    "Rating": 4
+                }
+            ]
+        },
+        "Ithaca Bakery": {
+            "location": "400 N Meadow St, Ithaca, NY 14850",
+            "reviews_and_ratings": [
+                {
+                    "Rating": 5,
+                    "Review": "i just had one of the chocolate hazelnut \ncroissants from here and it was one of the BEST things I've ever eaten. i would eat these every single day If i could"
+                },
+                {
+                    "Review": "i just had one of the chocolate hazelnut \ncroissants from here and it was one of the BEST things I've ever eaten. i would eat these every single day If i could",
                     "Rating": 5
                 },
                 {
-                    "Review": "Food was amazing, the crepes are a must have. Waitress was very nice and attentive, food came very quick and was nice n hot!",
+                    "Review": "Came to Ithaca Bakery in the covid- induced chaos of July 2020...loved the food, but ate 8n a strange isolation chamber in the parking lot. And couldn't...",
+                    "Rating": 5
+                },
+                {
+                    "Review": "A solid bakery to stop into for a quick bite. I grabbed my tried & true: lox on a bagel. It was piled high with fresh ingredients, all of which tasted...",
+                    "Rating": 4
+                }
+            ]
+        },
+        "Dolce Delight": {
+            "location": "1080 Danby Rd, Ithaca, NY 14850",
+            "reviews_and_ratings": [
+                {
+                    "Rating": 5,
+                    "Review": "Split the Sweet Piggy and a Mac and cheese with my daughter today and also had a cappuccino, plus a raspberry cheesecake brownie to take home. It was all..."
+                },
+                {
+                    "Review": "Split the Sweet Piggy and a Mac and cheese with my daughter today and also had a cappuccino, plus a raspberry cheesecake brownie to take home. It was all...",
+                    "Rating": 5
+                },
+                {
+                    "Review": "Top spot for breakfast sandwiches. Dolce Delight is a very tiny place so I chose to do takeout. A bit pricey, but worth it -- 2 lattes and 2 breakfast...",
+                    "Rating": 4
+                },
+                {
+                    "Review": "Dolce Delight was a delight. The perfect spot for a quick yet filling and healthy breakfast. They have a huge menu with tons of different savory breakfast...",
                     "Rating": 5
                 }
             ]
         },
-        "Wake \u2018n Bacon": {
-            "location": "420 W Belmont Ave, Chicago, IL 60657",
+        "Lincoln Street Diner": {
+            "location": "309 E Lincoln St, Ithaca, NY 14850",
+            "reviews_and_ratings": [
+                {
+                    "Rating": 5,
+                    "Review": "Delicious food. Their daily specials are not only creative, but they are soooo.....good!\n\nThe restaurant is very clean and Covid19 compliant. Felt totally..."
+                },
+                {
+                    "Review": "Delicious food. Their daily specials are not only creative, but they are soooo.....good!\n\nThe restaurant is very clean and Covid19 compliant. Felt totally...",
+                    "Rating": 5
+                },
+                {
+                    "Review": "What a great find!  Place is very small but the food is amazing.  Our server was attentive and went out of her way to make us feel welcome and appreciated-...",
+                    "Rating": 5
+                },
+                {
+                    "Review": "Great lunch. My husband had the hot beef sandwich and soup. He enjoyed it. I had the tuna sandwich and it was delicious. \nThe atmosphere was great and...",
+                    "Rating": 5
+                }
+            ]
+        },
+        "MIX Kitchen & Bar": {
+            "location": "205 Elmira Rd, Ithaca, NY 14850",
+            "reviews_and_ratings": [
+                {
+                    "Rating": 5,
+                    "Review": "This place is amazing. Look at this \"razberry moon margarita\"! Omg. It was the most delicious thing. Thank you Eric the Bartender!!\n\nThe Thai noodle (red..."
+                },
+                {
+                    "Review": "This place is amazing. Look at this \"razberry moon margarita\"! Omg. It was the most delicious thing. Thank you Eric the Bartender!!\n\nThe Thai noodle (red...",
+                    "Rating": 5
+                },
+                {
+                    "Review": "The food was pretty good, not great.  Duck is a tough meat to prepare, and it was properly done.  I was impressed with that! My husband said his steak was...",
+                    "Rating": 3
+                },
+                {
+                    "Review": "Arrived right when they opened at 4:30. Server thoroughly explained the menu and drink options. I had the Bistro Onion burger- it was filling. We also had...",
+                    "Rating": 3
+                }
+            ]
+        },
+        "Angelhearts Diner": {
+            "location": "401 E State St, Ste G2, Ithaca, NY 14850",
+            "reviews_and_ratings": [
+                {
+                    "Rating": 5,
+                    "Review": "Excellent vegan food including the most fabulous donuts and cinnamon rolls.  We ate here twice during our short stay in Ithaca and loved everything we had...."
+                },
+                {
+                    "Review": "Excellent vegan food including the most fabulous donuts and cinnamon rolls.  We ate here twice during our short stay in Ithaca and loved everything we had....",
+                    "Rating": 5
+                },
+                {
+                    "Review": "After hearing great things, I was pretty disappointed. I am not vegan, but I do enjoy vegan food so I decided to give this all-vegan restaurant a try. The...",
+                    "Rating": 3
+                },
+                {
+                    "Review": "Just delicious and filling! Plus, what an incredible but not surprising find in Ithaca. \n\nWhere do I start? How about the best donuts in the county! The...",
+                    "Rating": 5
+                }
+            ]
+        },
+        "Milkstand": {
+            "location": "215 N Meadow St, Ithaca, NY 14850",
+            "reviews_and_ratings": [
+                {
+                    "Rating": 5,
+                    "Review": "Having been here a few times for breakfast I've tried to mix up my choices.  Many interesting choices from regular omelette selections to very unique..."
+                },
+                {
+                    "Review": "Having been here a few times for breakfast I've tried to mix up my choices.  Many interesting choices from regular omelette selections to very unique...",
+                    "Rating": 5
+                },
+                {
+                    "Review": "More hype than anything else. The food was ok, it was like I was eating cafeteria food. Seating was also all clumped together creating a cafeteria vibe....",
+                    "Rating": 3
+                },
+                {
+                    "Review": "Amazing service every time I come to visit NY. It's our go to brunch place! A must have if you're in the area!",
+                    "Rating": 5
+                }
+            ]
+        },
+        "Collegetown Bagels": {
+            "location": "420 College Ave, Ithaca, NY 14850",
+            "reviews_and_ratings": [
+                {
+                    "Rating": 5,
+                    "Review": "2 words: southwest sourdough \n\nI would love to know their secret! Came back to buy a loaf but of course they were sold out/werent made that day."
+                },
+                {
+                    "Review": "2 words: southwest sourdough \n\nI would love to know their secret! Came back to buy a loaf but of course they were sold out/werent made that day.",
+                    "Rating": 5
+                },
+                {
+                    "Review": "This was the first time I visited this CTB location. My first impression was it wasn't very well ventilated. I decided to try the avocado toast. Was this...",
+                    "Rating": 3
+                },
+                {
+                    "Review": "All things considered (Ithaca's isolated location, for example...), CTB is a good go to spot. Nice cafe vibes with different pockets and types of seats...",
+                    "Rating": 4
+                }
+            ]
+        },
+        "Allechant": {
+            "location": "903 Hanshaw Rd, Ste 13, Ithaca, NY 14850",
+            "reviews_and_ratings": [
+                {
+                    "Rating": 5,
+                    "Review": "Great food and great people. Highly recommended. Nice local place with style. Good for brunch and good for dinner."
+                },
+                {
+                    "Review": "Great food and great people. Highly recommended. Nice local place with style. Good for brunch and good for dinner.",
+                    "Rating": 5
+                },
+                {
+                    "Review": "So, generally speaking, I would probably give this place a 3.5. That said, I'm rounding up to 4 stars based on the fact that the people who work here are...",
+                    "Rating": 4
+                },
+                {
+                    "Review": "Had brunch at Allechant after hearing many good things and it lived up to the hype! Very hard to choose from the menu, everything looked so delicious....",
+                    "Rating": 5
+                }
+            ]
+        },
+        "Alley Cat Cafe": {
+            "location": "112 N Cayuga St, Ithaca, NY 14850",
+            "reviews_and_ratings": [
+                {
+                    "Rating": 5,
+                    "Review": "I really love visiting this cat cafe on weekends when I need to take a break from studying. It is also a great study place at the cafe, but it definitely..."
+                },
+                {
+                    "Review": "I really love visiting this cat cafe on weekends when I need to take a break from studying. It is also a great study place at the cafe, but it definitely...",
+                    "Rating": 5
+                },
+                {
+                    "Review": "Who can resist a cat house?  I only saw one feline wandering around in the afternoon, but I suppose it's nap time.  There were several students studying...",
+                    "Rating": 4
+                },
+                {
+                    "Review": "Incredibly cute place with cats, merch and ambiance in abundance. The rosemary latte was great (if a tad sweet) and we also purchased local coffee (which...",
+                    "Rating": 4
+                }
+            ]
+        },
+        "Chatty Cathy Coffee & Juice Press": {
+            "location": "327 Eddy St, Ithaca, NY 14850",
+            "reviews_and_ratings": [
+                {
+                    "Rating": 5,
+                    "Review": "Chatty Cathy is a really cute spot; perfect for grabbing a bite to eat and some Java :-)\n\nMy girlfriend found this place; I went with her and ordered a hot..."
+                },
+                {
+                    "Review": "Chatty Cathy is a really cute spot; perfect for grabbing a bite to eat and some Java :-)\n\nMy girlfriend found this place; I went with her and ordered a hot...",
+                    "Rating": 5
+                },
+                {
+                    "Review": "Very small shop with great coffee. The Dirty Chai Latte was one of the best lattes I have ever had. Friendly staff and quick service. I will definitely be...",
+                    "Rating": 5
+                },
+                {
+                    "Review": "Very small place with no seating, but good drinks. My mocha had a strong coffee flavor which was pleasant, and the espresso was decent. Nothing special to...",
+                    "Rating": 4
+                }
+            ]
+        },
+        "Gimme! Coffee": {
+            "location": "430 N Cayuga St, Ithaca, NY 14850",
+            "reviews_and_ratings": [
+                {
+                    "Rating": 5,
+                    "Review": "The staff is super nice and the vibe is great. I'm from out of town and this place feels like home. Super nice people, wifi, and great beverages. \n\nI..."
+                },
+                {
+                    "Review": "The staff is super nice and the vibe is great. I'm from out of town and this place feels like home. Super nice people, wifi, and great beverages. \n\nI...",
+                    "Rating": 5
+                },
+                {
+                    "Review": "Very cute work space, roomy, but cold--they need to turn the heat up. Chai was good with lots of foam. Iced coffee was decent and the fig and goat cheese...",
+                    "Rating": 4
+                },
+                {
+                    "Review": "Oh gosh the young lady behind the counter if she didn't look lik my neice Id have a good word with her! The attitude in this one. Housemate clove syrup was...",
+                    "Rating": 3
+                }
+            ]
+        },
+        "Press Cafe": {
+            "location": "118 W Green St, Ithaca, NY 14850",
+            "reviews_and_ratings": [
+                {
+                    "Rating": 5,
+                    "Review": "I've been here several times now, and each time Duncan, one of the baristas, has been fantastic. When I wasn't sure whether I wanted a regular or seasonal..."
+                },
+                {
+                    "Review": "I've been here several times now, and each time Duncan, one of the baristas, has been fantastic. When I wasn't sure whether I wanted a regular or seasonal...",
+                    "Rating": 5
+                },
+                {
+                    "Review": "The coffee is good here. Add a star to my review if you like minimalism... because as a maximalist I'm admitting my biases.\n\nThe baked goods are alright,...",
+                    "Rating": 3
+                },
+                {
+                    "Review": "Great little coffee spot we happened upon while touring Cornell. Got a maca mocha and my daughters shared a chai latte. Beautiful little place and helpful...",
+                    "Rating": 5
+                }
+            ]
+        },
+        "Sunset Grill": {
+            "location": "823 Danby Rd, Ithaca, NY 14850",
             "reviews_and_ratings": [
                 {
                     "Rating": 4,
-                    "Review": "The food was excellent! The service needs work. The ambience is beautiful but the tables are a little small."
+                    "Review": "My companion and I decided to stop in mid afternoon on Saturday for a late lunch.  Though half of the tables were empty and no one in line ahead of us, it..."
                 },
                 {
-                    "Review": "The food was excellent! The service needs work. The ambience is beautiful but the tables are a little small.",
+                    "Review": "My companion and I decided to stop in mid afternoon on Saturday for a late lunch.  Though half of the tables were empty and no one in line ahead of us, it...",
                     "Rating": 4
                 },
                 {
-                    "Review": "This place is the best!! I love the concept of ordering at the table via your phone, only part that sucks is if you want another drink or dessert, you have...",
-                    "Rating": 5
-                },
-                {
-                    "Review": "Although the ambience and aesthetics of the place is quite Instagram worthy, the food was not up to par. Don't get me wrong, the flowered ceiling and the...",
-                    "Rating": 3
-                }
-            ]
-        },
-        "Cracked on Milwaukee": {
-            "location": "1359 N Milwaukee Ave, Chicago, IL 60622",
-            "reviews_and_ratings": [
-                {
-                    "Rating": 5,
-                    "Review": "Delightful egg-sperience :) \nHad brunch outside. Super friendly staff! Food & drinks were deeelicious  \nOur server was amazing & sweet. \nWe will be back for..."
-                },
-                {
-                    "Review": "Delightful egg-sperience :) \nHad brunch outside. Super friendly staff! Food & drinks were deeelicious  \nOur server was amazing & sweet. \nWe will be back for...",
-                    "Rating": 5
-                },
-                {
-                    "Review": "I'm a UIUC alum so I ate at the OG spot in Champaign countless times! Great place for breakfast food! My visit reminded me of my college days haha. I love...",
-                    "Rating": 4
-                },
-                {
-                    "Review": "This is a really cute little place and we were obsessed with the painting on the wall of the breakfast items and Chicago skyline! As far as food goes...",
-                    "Rating": 3
-                }
-            ]
-        },
-        "Yolk - South Loop": {
-            "location": "1120 S Michigan Ave, Chicago, IL 60605",
-            "reviews_and_ratings": [
-                {
-                    "Rating": 5,
-                    "Review": "Came here with my bf for brunch. We got the berry French toast and countryside skillet to share. The French toasts were thick, soft and fluffy. The berry..."
-                },
-                {
-                    "Review": "Came here with my bf for brunch. We got the berry French toast and countryside skillet to share. The French toasts were thick, soft and fluffy. The berry...",
-                    "Rating": 5
-                },
-                {
-                    "Review": "Lemon Blueberry Cakes - 5/5. Phenomenal. Don't get the lemon flavor and don't care. Nice texture and sweetness level. Topped with lots of blueberries\n\nRed...",
-                    "Rating": 4
-                },
-                {
-                    "Review": "Excellent! We came here 3x in one week. Always ready on time. Great portions. The inside is nice and inviting. Servers at the counter were great. \n\n* West...",
-                    "Rating": 5
-                }
-            ]
-        },
-        "Masters Pancake House": {
-            "location": "5265 S Cicero Ave, Chicago, IL 60632",
-            "reviews_and_ratings": [
-                {
-                    "Rating": 5,
-                    "Review": "Visited February 2022 \nBig selection of American breakfast and also Latino dishes - so you have the best of both world!\n\nService was great & we were taken..."
-                },
-                {
-                    "Review": "Visited February 2022 \nBig selection of American breakfast and also Latino dishes - so you have the best of both world!\n\nService was great & we were taken...",
-                    "Rating": 5
-                },
-                {
-                    "Review": "They weren't able accommodate a family of 8 they literally divided the family in two different tables. A business should NEVER offer to split a family....",
-                    "Rating": 4
-                },
-                {
-                    "Review": "Went here with a friend who was flying out of Midway after reading the Yelp reviews. On the plus side, service was very friendly and efficient. Coffee cups...",
-                    "Rating": 3
-                }
-            ]
-        },
-        "Batter & Berries": {
-            "location": "2748 N Lincoln Ave, Chicago, IL 60614",
-            "reviews_and_ratings": [
-                {
-                    "Rating": 5,
-                    "Review": "I am so glad that I finally got the chance to make it to one of Chicago's well-known homes for a hearty home cooked brunch, on top of being able to support..."
-                },
-                {
-                    "Review": "I am so glad that I finally got the chance to make it to one of Chicago's well-known homes for a hearty home cooked brunch, on top of being able to support...",
-                    "Rating": 5
-                },
-                {
-                    "Review": "A friend and I came on a Saturday for brunch. One frustrating thing was I checked Yelp and was going to put our name down on the app, and the next time I...",
-                    "Rating": 5
-                },
-                {
-                    "Review": "Delicious!!\n\nI was blown away by the food & the service was great. Our waiter knew the menu like the back of his hand. He was very outgoing and excited to...",
-                    "Rating": 5
-                }
-            ]
-        },
-        "Three Sons Pan Cake House & Family Restaurant": {
-            "location": "6200 S Archer Ave, Chicago, IL 60638",
-            "reviews_and_ratings": [
-                {
-                    "Rating": 5,
-                    "Review": "Simply the Best ! The Owners are Amazing! The food is amazing! People know about three Sons!"
-                },
-                {
-                    "Review": "Simply the Best ! The Owners are Amazing! The food is amazing! People know about three Sons!",
-                    "Rating": 5
-                },
-                {
-                    "Review": "Old school family diner kind of setup.  You get a lot of restaurants like this in the Chicago area and Three sons did not disappoint.  Arrived on a Sunday...",
-                    "Rating": 4
-                },
-                {
-                    "Review": "Happy camper. Now I was going down the block to my regular spot but I saw a parking and jumped on it.  I am glad I did. I only ordered an oatmeal and my mom...",
-                    "Rating": 4
-                }
-            ]
-        },
-        "Top View": {
-            "location": "4715 W 63rd St, Chicago, IL 60629",
-            "reviews_and_ratings": [
-                {
-                    "Rating": 5,
-                    "Review": "Absolutely a \"must go eat here\" place!  Great breakfast!  Fantastic variety on the menu. Waitress was most cordial & attentive. Visiting here near MDW;..."
-                },
-                {
-                    "Review": "Absolutely a \"must go eat here\" place!  Great breakfast!  Fantastic variety on the menu. Waitress was most cordial & attentive. Visiting here near MDW;...",
-                    "Rating": 5
-                },
-                {
-                    "Review": "This location is very close to Midway airport which is the reason why I stopped in. Quick meal before or after a flight\n\nUnfortunately the foos isn't that...",
+                    "Review": "Came midday Saturday and expected there to be quite a few people, which was definitely true. It took a while to be seated, which is okay. The issues started...",
                     "Rating": 2
                 },
                 {
-                    "Review": "Awful. Just stay away. The worst breakfast I've had in some time. There was also a strange smell. I'm okay with the automatic 1 star as the waitress was...",
-                    "Rating": 1
-                }
-            ]
-        },
-        "Maple N Jams Cafe": {
-            "location": "6814 W 87th St, Burbank, IL 60459",
-            "reviews_and_ratings": [
-                {
-                    "Rating": 5,
-                    "Review": "Danka was great! Very friendly and attentive. The berry crepes were amazing! Very good service and atmosphere. \n\nDziekuje Pani Danka!"
-                },
-                {
-                    "Review": "Danka was great! Very friendly and attentive. The berry crepes were amazing! Very good service and atmosphere. \n\nDziekuje Pani Danka!",
-                    "Rating": 5
-                },
-                {
-                    "Review": "Horrible customer service!\n\nI called to place a carry out order. I was on hold for 16 minutes. When the woman finally answered the phone, she didn't mention...",
-                    "Rating": 1
-                },
-                {
-                    "Review": "Let me preference my review by stating that I ordered from door dash. I ordered the OPA omelette, which was supposed to come with a side of pancakes. I...",
-                    "Rating": 1
-                }
-            ]
-        },
-        "First Watch": {
-            "location": "2155 22nd St, Ste 24, Oak Brook, IL 60523",
-            "reviews_and_ratings": [
-                {
-                    "Rating": 5,
-                    "Review": "A different take in breakfast..\nMy girlfriend had the ultimate egg sandwich.\nI had the ricotta lemon pancakes with eggs and a side of grits..\nEverything was..."
-                },
-                {
-                    "Review": "A different take in breakfast..\nMy girlfriend had the ultimate egg sandwich.\nI had the ricotta lemon pancakes with eggs and a side of grits..\nEverything was...",
-                    "Rating": 5
-                },
-                {
-                    "Review": "Though this was a recommendation from a local friend of ours, we were underwhelmed.   It's an adequate breakfast place for a basic breakfast.   \n\nHowever, a...",
-                    "Rating": 3
-                },
-                {
-                    "Review": "I'm a big breakfast/brunch person, but it seems like anywhere you get breakfast, it'll be mediocre...like super mediocre. This does NOT apply to First...",
-                    "Rating": 5
-                }
-            ]
-        },
-        "Honeybear Cafe": {
-            "location": "7036 N Clark St, Chicago, IL 60626",
-            "reviews_and_ratings": [
-                {
-                    "Rating": 5,
-                    "Review": "Staff was nice and friendly, service was quick! Food was delicious! Our waitress started us off with cheesecake samples which was the cutest touch!"
-                },
-                {
-                    "Review": "Staff was nice and friendly, service was quick! Food was delicious! Our waitress started us off with cheesecake samples which was the cutest touch!",
-                    "Rating": 5
-                },
-                {
-                    "Review": "Free cheesecake bites for a starter. Or a palate cleanser. Or just because. I don't know why, but it's amazing.\n\nKids chocolate chip pancakes in the shape...",
-                    "Rating": 5
-                },
-                {
-                    "Review": "This place has crazy wait times on the weekends and their to-go time also takes an hour. Just be prepared. The inside has plenty of seating and has a  very...",
-                    "Rating": 4
-                }
-            ]
-        },
-        "La Catedral Cafe & Restaurant": {
-            "location": "2500 S Christiana Ave, Chicago, IL 60623",
-            "reviews_and_ratings": [
-                {
-                    "Rating": 5,
-                    "Review": "Second time around so I decided to take my local family to the cathedral which I had previously visited and had been blown away by the ambiance of the..."
-                },
-                {
-                    "Review": "Second time around so I decided to take my local family to the cathedral which I had previously visited and had been blown away by the ambiance of the...",
-                    "Rating": 5
-                },
-                {
-                    "Review": "Only a 3 because food was good l!!!\n\nService was 0 stars thou\nWaited 50 minutes for 3 meals, literally every table around us came and went and we just sat...",
-                    "Rating": 3
-                },
-                {
-                    "Review": "I thought it was a joke when people told me that you could get really delicious food from a former funeral house turned restaurant. So glad that I didn't...",
-                    "Rating": 5
-                }
-            ]
-        },
-        "Mr. Stacks Cicero": {
-            "location": "3064 S Cicero Ave, Chicago, IL 60804",
-            "reviews_and_ratings": [
-                {
-                    "Rating": 4,
-                    "Review": "Their food is good. They have quick service. Staff is very friendly. My new go-to for breakfast."
-                },
-                {
-                    "Review": "Their food is good. They have quick service. Staff is very friendly. My new go-to for breakfast.",
-                    "Rating": 4
-                },
-                {
-                    "Review": "StackStacks is the way to go when it comes to breakfast. Clean and very good food specially if u get hosted by the manager marie she is the best of serving...",
-                    "Rating": 5
-                },
-                {
-                    "Review": "Tried a new spot out and wasn't necessarily thrilled with the experience. When the host ask where you'd like to sit and then sits you in the exact opposite...",
+                    "Review": "All around meh.\nThe service is okay, the atmosphere inside is alright and outside you have the view... But you can't see the lake because of the trees on...",
                     "Rating": 3
                 }
             ]
         },
-        "Bluebird": {
-            "location": "3938 N Central Ave, Chicago, IL 60634",
+        "The State Diner": {
+            "location": "428 W State St, Ithaca, NY 14850",
             "reviews_and_ratings": [
                 {
                     "Rating": 5,
-                    "Review": "TL;DR: do not sleep on Bluebird brunch! \n\nSearching Yelp for a new brunch spot near me, I'm actually surprised Bluebird was as far down the list as it was,..."
+                    "Review": "An unplanned lunch stop in Ithaca found us in close proximity to The State Diner.\nAs soon as we walked in off the street smiles spread across our faces...."
                 },
                 {
-                    "Review": "TL;DR: do not sleep on Bluebird brunch! \n\nSearching Yelp for a new brunch spot near me, I'm actually surprised Bluebird was as far down the list as it was,...",
+                    "Review": "An unplanned lunch stop in Ithaca found us in close proximity to The State Diner.\nAs soon as we walked in off the street smiles spread across our faces....",
                     "Rating": 5
                 },
                 {
-                    "Review": "I ordered for delivery. \nWas pretty excited to try this place since it has great reviews. \n\nWe ordered the chicken sandwich, Gouda burger and Truffle...",
-                    "Rating": 2
+                    "Review": "Summer 2022 I visited this Diner - The State Diner - on my travels through New York State. There were other Diners in Ithaca, but in the afternoon I made a...",
+                    "Rating": 5
                 },
                 {
-                    "Review": "I want to give them 5 stars but as of now I just can't. I had a crazy incident happen with my food (they made it right) but overall this place has...",
-                    "Rating": 4
+                    "Review": "Came here for lunch and was surprised to get pretty authentic diner vibes in the middle of Ithaca, New York. I'd say my experience was alright, but nothing...",
+                    "Rating": 3
                 }
             ]
         },
-        "Yolk - Streeterville": {
-            "location": "355 E Ohio St, Chicago, IL 60611",
+        "The Legacy Cafe": {
+            "location": "1 Culligan Dr, Ithaca, NY 14850",
             "reviews_and_ratings": [
                 {
                     "Rating": 5,
-                    "Review": "Good food and service. \nIt was spacious enough that did not feel crowded. Liked the place."
+                    "Review": "Stopped by the cafe for lunch on a Monday.  Had a grilled chicken sandwich (customized to your preference) with L, T and honey mustard with a side of sweet..."
                 },
                 {
-                    "Review": "Good food and service. \nIt was spacious enough that did not feel crowded. Liked the place.",
+                    "Review": "Stopped by the cafe for lunch on a Monday.  Had a grilled chicken sandwich (customized to your preference) with L, T and honey mustard with a side of sweet...",
                     "Rating": 5
                 },
                 {
-                    "Review": "Good place for a big and early breakfast with amazing gluten-free bread. \n\nI was so glad this place opens early on Saturdays (7am). I needed to eat...",
+                    "Review": "A hidden gem inside of the airport. \n\nWent for Saturday brunch and the food and service were fantastic. \n\nFish perfectly seasoned and fried and the waffles...",
                     "Rating": 5
                 },
                 {
-                    "Review": "This restaurant is the absolute best! In fact, it was so good that I ended up going here for breakfast three times! Both the drip coffee and the lattes have...",
-                    "Rating": 5
-                }
-            ]
-        },
-        "Bryn Mawr Breakfast Club": {
-            "location": "3348 W Bryn Mawr Ave, Chicago, IL 60659",
-            "reviews_and_ratings": [
-                {
-                    "Rating": 4,
-                    "Review": "Wonderful breakfast \n\nService friendly and efficient \n\nWhimsically designed and comfortable"
-                },
-                {
-                    "Review": "Wonderful breakfast \n\nService friendly and efficient \n\nWhimsically designed and comfortable",
-                    "Rating": 4
-                },
-                {
-                    "Review": "The food was excellent, and the plating was beautiful. This is probably one of the best brunches I've had in Chicago. My favorite sweet dish was the peach...",
-                    "Rating": 5
-                },
-                {
-                    "Review": "A breakfast feast that does not disappoint. Everything we ordered was top tier. Wait was around 20 to 30min upon arrival. We'll worth the wait. Every nook...",
+                    "Review": "We went for the all-you-can-eat weekend brunch and it's amazing! The quality of food, for the value, cannot be beat! I highly recommend the waffles: so good...",
                     "Rating": 5
                 }
             ]
         },
-        "Cindy's Rooftop": {
-            "location": "12 S Michigan Ave, Chicago, IL 60603",
+        "Paris Baguette - Ithaca": {
+            "location": "125 E State St, Ithaca, NY 14850",
             "reviews_and_ratings": [
                 {
                     "Rating": 5,
-                    "Review": "Chicago has many spots for good views and Cindy's Rooftop is one of them. The reason this view is special is that they are located on the rooftop of the..."
+                    "Review": "Fantastic bakery, brilliant mochi fusion treats, and good coffee. I guess my only gripe is that I live so far away! They also make cakes, etc and though I..."
                 },
                 {
-                    "Review": "Chicago has many spots for good views and Cindy's Rooftop is one of them. The reason this view is special is that they are located on the rooftop of the...",
+                    "Review": "Fantastic bakery, brilliant mochi fusion treats, and good coffee. I guess my only gripe is that I live so far away! They also make cakes, etc and though I...",
                     "Rating": 5
                 },
                 {
-                    "Review": "The vibes are what makes this place! We were seated at a little corner with blankets and a perfect view of the city. \n\nWe all ordered the deep purple drink...",
+                    "Review": "Note: I tend to give chains 3-stars by default as they usually don't differentiate much from one another. \n\nI was surprised when I found out Paris Baguette...",
                     "Rating": 3
                 },
                 {
-                    "Review": "Nice location, great food. Get a reservation in-advance if you can in order to ensure a good seat. But the bar top is often available for one or two.\n\nFor...",
+                    "Review": "This is the perfect stop on my way across the commons to my office. I was able to grab a croissant for my coworker, a coffee and a salad for my lunch and a...",
                     "Rating": 5
                 }
             ]
         },
-        "Cafe El Meson": {
-            "location": "4631 S Kedzie Ave, Chicago, IL 60632",
+        "Circus Truck": {
+            "location": "720 W Green St, Ithaca, NY 14850",
             "reviews_and_ratings": [
                 {
                     "Rating": 5,
-                    "Review": "Went with my family and it is so nice. Many books to read. The owner greets everyone as family. \n\nGreat Christian collection and music. \nLove  the Puerto..."
+                    "Review": "First time trying this truck we heard about through rumors. Although it's hard to find a lot of details online it is definitely worth going to.\n\nThe owner..."
                 },
                 {
-                    "Review": "Went with my family and it is so nice. Many books to read. The owner greets everyone as family. \n\nGreat Christian collection and music. \nLove  the Puerto...",
+                    "Review": "First time trying this truck we heard about through rumors. Although it's hard to find a lot of details online it is definitely worth going to.\n\nThe owner...",
                     "Rating": 5
                 },
                 {
-                    "Review": "So incredibly delicious, this place NEVER fails to satisfy with every item in their menu. Excellent customer service, but mostly very tasty, great flavor,...",
-                    "Rating": 5
+                    "Review": "This is such a cool spot in Ithaca!  We got the vodka sauce pasta and the breakfast burrito.  We are vegetarian, so we asked if the burrito could be made...",
+                    "Rating": 4
                 },
                 {
-                    "Review": "I was in the area after dropping off somebody at the airport and this place popped up on my yelp search. Went in and ordered an avena (Oatmeal) smoothie and...",
-                    "Rating": 5
+                    "Review": "Circus Truck is such a unique find in the commons. It is parked in a somewhat secluded bank parking lot on weekdays until late lunch time. The food is...",
+                    "Rating": 4
                 }
             ]
         },
-        "The Purple Pig": {
-            "location": "444 N Michigan Ave, Chicago, IL 60611",
+        "The Bistro at La Tourelle": {
+            "location": "1150 Danby Rd, Ithaca, NY 14850",
             "reviews_and_ratings": [
                 {
                     "Rating": 5,
-                    "Review": "Wow. That's all I can say.\n\nIt was my family's last night in Chicago and were looking for a place for dinner. The Purple Pig had many reviews and we stopped..."
+                    "Review": "This is actually the best steak place in Ithaca. There's a movement toward cruelty free food in general here, but the bistro gives Zero Foxtrots. They are..."
                 },
                 {
-                    "Review": "Wow. That's all I can say.\n\nIt was my family's last night in Chicago and were looking for a place for dinner. The Purple Pig had many reviews and we stopped...",
+                    "Review": "This is actually the best steak place in Ithaca. There's a movement toward cruelty free food in general here, but the bistro gives Zero Foxtrots. They are...",
                     "Rating": 5
                 },
                 {
-                    "Review": "Mind-blowingly good food and service.\n\nDate of Visit: May 6, 2023\n\nOrdered: \n(Drink) Mango Margarita - 4/5 - Very fresh and refreshing. Wasn't a fan of the...",
-                    "Rating": 5
+                    "Review": "We very much enjoyed our overall experience at the Bistro. The atmosphere is country style with the Bistro located in an old farmhouse surrounded by flowers...",
+                    "Rating": 4
                 },
                 {
-                    "Review": "I loved the scallops but the portion was very small :( \nApple tart dessert yum!\nVery busy vibrant spot!",
+                    "Review": "A super cute spot to enjoy an outdoor breakfast, especially if you are staying at La Tourelle! \n\nThe menu options are pretty hearty, and most of the menu...",
                     "Rating": 4
                 }
             ]

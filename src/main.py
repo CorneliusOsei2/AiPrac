@@ -9,7 +9,9 @@ restaurants = []
 
 def init_restaurants(n):
     """
-    make a random Restaurant to use in testing the set_scores function in restaurant.py
+    Initialize the restaurants list with Restaurant objects made from all_restaurants.json.
+
+    n = number of items to iterate through in all_restaurants.json
     """
     global restaurants
 
@@ -39,7 +41,15 @@ import sys
 
 
 def make_restaurants(n=100, display=False):
+    """
+    set scores for each item in restaurants list
+
+    n = number of Restaurant objects to make in restaurants
+    display = display scores to console for each Restaurant
+    """
     global restaurants
+
+    #for example, you can do make_restaurants(1, True) to display the results of set_score for one restaurant
 
     init_restaurants(n)
 
@@ -58,6 +68,9 @@ def make_restaurants(n=100, display=False):
 
 
 def make_recommendations(n):
+    """
+    Get the top-N recommendations
+    """
     global restaurants
 
     recs = Recommendations(restaurants=restaurants)
@@ -82,7 +95,7 @@ if __name__ == "__main__":
     while go=="y":
         main()
         n = int(input("\nChoose how many recommendations you want: "))
-        make_restaurants()
+        make_restaurants() 
         recs = make_recommendations(n)
 
         go2 = "y"
