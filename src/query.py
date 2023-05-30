@@ -117,7 +117,7 @@ def main():
     LOCATION = location
 
     print(
-        "\nThank you! Alright, give me a second to fetch the available restaurants *****-----****\n"
+        "\nThank you! Give me a second to fetch the available restaurants.\n"
     )
 
     sys.stdout = io.StringIO()

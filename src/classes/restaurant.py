@@ -51,16 +51,21 @@ class Restaurant:
 
     def __set_rating_score(self):
         """
-        set rating_score to a score
+        Normalize ratings and take average. Set the result to rating_score.
         """
         total = sum(self.ratings)
         norm_ratings = (r / total for r in self.ratings)
         self.rating_score = statistics.mean(norm_ratings) if self.ratings else 0
 
     def __set_final_score(self):
+        """
+        Calculate final score from rating and review scores and their weights, which is from eval_weights.
+        """
         global model, tokenizer
 
         rating_weight, review_weight = eval_weights(self.ratings, self.reviews, model, tokenizer)
+
+        # print(f"\nPCA weights\n rating weight: {rating_weight}, review weight: {review_weight}\n")
 
         self.final_score = (rating_weight * self.rating_score) + (
             review_weight * self.review_score
@@ -74,7 +79,7 @@ class Recommendations:
 
     def set_top_N(self, n):
         """
-        sort and get the top N restaurants based on their final_score
+        sort in descending order of each restaurant's final score and and get the top N
         """
         n = min(n, len(self.restaurants))
         
